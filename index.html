@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./cmn/css/cmn.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>72GRAGE</title>
     <meta name="description" content="説明書き">
     <link rel="canonical" href="https://72garage.com/">
@@ -29,26 +30,29 @@
 
 <body>
 
-    <header class="flex">
-        <div class="btn-trigger" id="btn01">
+    <header class="d-flex align-items-center py-2 px-5">
+        <div class="btn-trigger active" id="btn01">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <img src="" alt="">
-        <div>
-            <dl>
-                <dt><img src="" alt=""></dt>
-                <dd>ログイン</dd>
-            </dl>
-            <dl>
-                <dt><img src="" alt=""></dt>
-                <dd>カート</dd>
-            </dl>
+        <div class="text-white d-flex align-items-center ml-auto justify-content-between user-area">
+            <a href="#" class="text-white">
+                <dl class="text-center mb-0 mt-1">
+                    <dt class="d-inline-block mb-1"><img src="./cmn/img/icon_user.svg" alt=""></dt>
+                    <dd class="mb-0">ログイン</dd>
+                </dl>
+            </a>
+            <a href="#" class="text-white">
+                <dl class="text-center mb-0 mt-1">
+                    <dt class="d-inline-block mb-1"><img src="./cmn/img/icon_cart.svg" alt=""></dt>
+                    <dd class="mb-0">カート</dd>
+                </dl>
+            </a>
         </div>
     </header>
 
-    <main>
+    <main class="d-flex">
         <div id="side-menu">
             <ul class="menu">
                 <li class="menu__item">
@@ -114,20 +118,25 @@
                 <li><a href="#">facebook</a></li>
             </ul>
         </div>
-        <section id="home">
-            <img src="" alt="">
-            <h2>タイトル</h2>
-        </section>
+        <div id="main">
+            <section>
+                <img src="./cmn/img/img_top01.jpg" alt="" class="w-100">
+            </section>
+            <section id="home">
+                <img src="" alt="">
+                <h2>タイトル</h2>
+            </section>
 
-        <section class="about"> 
-            <div class="section-title-area">
-                <div class="line"></div>
-                <div>
-                    <dt>サブタイトル </dt>
-                    <dd>タイトル</dd>
+            <section class="about">
+                <div class="section-title-area">
+                    <div class="line"></div>
+                    <div>
+                        <dt>サブタイトル </dt>
+                        <dd>タイトル</dd>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -135,5 +144,44 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- アコーディオンメニュー -->
+    <script>
+        $(function(){
+            $('.js-menu__item__link').each(function(){
+                $(this).on('click',function(){
+                    $(this).toggleClass('on');
+                    $("+.submenu",this).slideToggle();
+                    return false;
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $("#btn01").on("click",function(){
+                $(this).toggleClass("active")
+                //activeクラスの状態に応じてwidthを変更
+                if ($(this).hasClass("active")) {
+                    $("#side-menu").animate({
+                        "left":"0"
+                    })
+                    $("#main").animate({
+                        "padding-left":"260px"
+                    })
+                } else {
+                    $("#side-menu").animate({
+                        "left":"-260px"
+                    })
+                    $("#main").animate({
+                        "padding-left":"0"
+                    })
+                }
+
+            })
+        });
+    </script>
 </body>
 </html>
