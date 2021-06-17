@@ -1,3 +1,32 @@
+@mixin font_icon($type : "") {
+
+  $font_weight : 900;
+
+  font-style: normal;
+  font-family: "Font Awesome 5 Free";
+  font-variant: normal;
+  text-rendering: auto;
+  letter-spacing: 0;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @if $type == 'chevron-up' {
+    content: '\f077';
+  }
+  @else if $type == 'chevron-right' {
+    content: '\f054';
+  }
+  @else if $type == 'chevron-down' {
+    content: '\f078';
+  }
+  @else if $type == 'chevron-left' {
+    content: '\f053';
+  }
+
+  font-weight: $font_weight;
+}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -9,11 +38,19 @@ header {
   position: fixed;
   top: 0;
   height: 73px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 999;
+  .logo {
+    width: 60%;
+    max-width: 200px;
+    min-width: 120px;
+  }
   .user-area {
     width: 120px;
     justify-content: space-around;
-    dt {
-      width: 26px;
+    i {
+      font-size: 24px;
     }
     dd {
       font-size: 14px;
@@ -80,17 +117,33 @@ header {
 
 #side-menu {
   position: fixed;
+  z-index: 999;
   width: 260px;
-  top: 73px;
+  margin-top: 73px;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   background: #fff;
-  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% - 73px);
+  padding-bottom: 80px;
+
+  .menu {
+    padding-left: 0;
+    width: 80%;
+    max-width: 210px;
+    min-width: 210px;
+    margin: 0 auto;
+  }
 
   .menu__item {
     color: #222;
     cursor: pointer;
     display: block;
     margin-bottom: 1px;
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .menu__item__link {
@@ -102,27 +155,61 @@ header {
   }
 
   .menu__item__link:after {
-    content: '\f067';
-    display: block;
-    font-family: "Font Awesome 5 Free";
+    @include font_icon("chevron-right");
     line-height: 60px;
     position: absolute;
     right: 0;
-    text-align: center;
     top: 0;
-    width: 60px;
+    color: #e0e0e0;
   }
 
   .menu__item__link.on:after {
-    content: '\f068';
+    @include font_icon("chevron-down");
+    line-height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   .submenu {
     display: none;
   }
+
   .submenu__item {
+    list-style: none;
     color: #222;
     padding: 1rem;
+    a {
+      color: #222;
+    }
+  }
+
+  .icon-list {
+    list-style: none;
+    width: 80%;
+    max-width: 210px;
+    min-width: 210px;
+    margin: 5rem auto 0 auto;
+    padding-left: 0;
+    color: #222;
+    li {
+      a {
+        font-size: 14px;
+        color: #222;
+        .circle {
+          border: 1px solid #222;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+      :hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -133,5 +220,30 @@ header {
   padding-left: 260px;
   width: 100%;
   padding-top: 73px;
+
+  // =========== ファーストビュー ===========
+  #first-view {
+    position: relative;
+    img {
+      height: calc(100vh - 73px);
+    }
+    .mask {
+      width: 100%;
+      background: #222222;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: calc(100vh - 73px);
+    }
+    .top-title-area {
+      position: absolute;
+      left: 5%;
+      bottom: 5%;
+      color: #fff;
+    }
+  }
+
 }
+
 
