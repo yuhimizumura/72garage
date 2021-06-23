@@ -352,7 +352,8 @@
                 </div>
 
                 <div class="background">
-                    <div class="slider pt-5">
+                    <div class="slider-wrap">
+                        <div class="slider pt-5">
                         <div>
                             <img src="./cmn/img/img_story01.jpg" alt="">
                             <dl>
@@ -474,16 +475,60 @@
                             </dl>
                         </div>
                     </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="review" class="top-space">
+                <div class="section-title-area">
+                    <div class="line"></div>
+                    <dl class="title-area">
+                        <dt>お客様の声</dt>
+                        <dd>REVIEW</dd>
+                    </dl>
+                </div>
+
+                <!-- SnapWidget -->
+                <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                <div class="wrap">
+                    <iframe src="https://snapwidget.com/embed/945409" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+                </div>
+            </section>
+
+            <section id="partner" class="top-space">
+                <div class="section-title-area">
+                    <div class="line"></div>
+                    <dl class="title-area">
+                        <dt>販売パートナー募集</dt>
+                        <dd>PARTNER</dd>
+                    </dl>
+                </div>
+
+                <div class="d-flex wrap justify-content-between">
+                    <div class="banner">
+                        <img src="./cmn/img/img_bunner01.png" alt="">
+                        <div class="banner-text">
+                            <h6>販売代理店募集中</h6>
+                            <p>SALES AGENT</p>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <img src="./cmn/img/img_bunner02.png" alt="">
+                        <div class="banner-text">
+                            <h6>スポンサー契約募集中</h6>
+                            <p>SPONSORED CONTRACT</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
         </div><!-- #main -->
+
+        
+
     </main>
 
-    <footer>
 
-
-    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -554,8 +599,8 @@
     <script>
         $(function() {
             $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 4000,
+                // autoplay: true,
+                // autoplaySpeed: 4000,
                 arrows: true,
                 slidesToShow: 3,
                 slidesToScroll: 1,
