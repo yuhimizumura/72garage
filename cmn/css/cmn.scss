@@ -1,3 +1,22 @@
+body {
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+.sp-display {
+  display: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 200%;
+}
+
+@media screen and (max-width: 480px) {
+  .pc-display {
+    display: none;
+  }
+}
+
 @mixin font_icon($type : "") {
 
   $font_weight : 900;
@@ -217,6 +236,8 @@ header {
 // メイン
 
 #main {
+  background: #222;
+  color: #fff;
   padding-left: 260px;
   width: 100%;
   padding-top: 73px;
@@ -237,13 +258,162 @@ header {
       height: calc(100vh - 73px);
     }
     .top-title-area {
+      font-family: 'Noto Serif JP', serif;
       position: absolute;
       left: 5%;
       bottom: 5%;
       color: #fff;
+      h2 {
+        font-size: 25px;
+        letter-spacing: 0.5px;
+      }
+      h3 {
+        font-size: 45px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  // ===========　全体Wrap ===========
+  .wrap {
+    width: 90%;
+    margin: 5rem auto 0 auto;
+    max-width: 960px;
+  }
+
+  .top-space {
+    margin-top: 10rem;
+  }
+
+  // =========== セクションタイトル ===========
+  .section-title-area {
+    margin-left: 4%;
+    display: flex;
+    align-items: center;
+    .line {
+      width: 10%;
+      height: 1px;
+      background: #fff;
+    }
+    dt {
+      font-size: 16px;
+    }
+    dd {
+      font-size: 55px;
+    }
+    .title-area {
+      margin-left: 2rem;
+      font-family: 'Noto Serif JP', serif;
+    }
+  }
+
+  // =========== ABOUT ===========
+
+  // =========== PICKUP ===========
+  #pickup {
+    .new-items {
+      width: 35%;
+      dl {
+        font-weight: 200;
+        width: 100%;
+        line-height: 200%;
+        margin-top: 1rem;
+        letter-spacing: 2px;
+        dt {
+          font-weight: 200;
+          font-size: 24px;
+        }
+        dd {
+          font-size: 18px;
+        }
+      }
+    }
+    .new-items:nth-of-type(2) {
+      padding-top: 10rem;
+    }
+  }
+
+  // =========== PRODUCT ===========
+
+  #product {
+    .items {
+      width: calc((100% - 60px) / 4);
+      dl {
+        margin-top: 1rem;
+        line-height: 200%;
+        dt {
+          font-size: 18px;
+        }
+        dd {
+          font-size: 14px;
+        }
+      }
+    }
+    p {
+      margin-top: 2rem;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  // =========== NEWS ===========
+
+  #news {
+    .items {
+      width: calc((100% - 60px) / 3);
+      margin-bottom: 2rem;
+      dl {
+        margin-top: 1rem;
+        line-height: 200%;
+        dt {
+          font-size: 18px;
+        }
+        dd {
+          font-size: 14px;
+        }
+      }
+    }
+    p {
+      margin-top: 2rem;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  #story {
+
+    .background {
+      background-image: url("../img/img_back.jpg");
+      min-height: 800px;
+      width: 100%;
+      background-size: cover;
+
+      .slider {
+        img {
+          width: 100%;
+        }
+      }
+      .slick-slide {
+        transform: scale(.8);
+        opacity: 0.6;
+        dl {
+          display: none;
+        }
+      }
+      .slick-current {
+        transform: scale(1);
+        opacity: 1;
+        dl {
+          display: block;
+        }
+      }
     }
   }
 
 }
+
+
 
 
