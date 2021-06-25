@@ -2,15 +2,24 @@
 body {
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif; }
 
-.sp-display {
-  display: none; }
-
 p {
   font-size: 16px;
   line-height: 200%; }
 
 @media screen and (max-width: 480px) {
   .pc-display {
+    display: none; }
+  .sp-flex-column {
+    flex-direction: column; }
+  .sp-full {
+    width: 100% !important; }
+  .sp-75 {
+    width: 75% !important; }
+  .sp-top {
+    margin-top: 3rem; } }
+
+@media screen and (min-width: 480px) {
+  .sp-display {
     display: none; } }
 
 img {
@@ -30,9 +39,15 @@ header {
     width: 60%;
     max-width: 200px;
     min-width: 120px; }
+    @media screen and (max-width: 480px) {
+      header .logo {
+        max-width: 150px; } }
   header .user-area {
     width: 120px;
     justify-content: space-around; }
+    @media screen and (max-width: 480px) {
+      header .user-area {
+        width: 60px; } }
     header .user-area i {
       font-size: 24px; }
     header .user-area dd {
@@ -96,6 +111,9 @@ header {
   -webkit-overflow-scrolling: touch;
   height: calc(100% - 73px);
   padding-bottom: 80px; }
+  @media screen and (max-width: 480px) {
+    #side-menu {
+      left: -260px; } }
   #side-menu .menu {
     padding-left: 0;
     width: 80%;
@@ -175,12 +193,20 @@ header {
     #side-menu .icon-list li :hover {
       cursor: pointer; }
 
+.wrap {
+  width: 90%;
+  margin: 5rem auto 0 auto;
+  max-width: 960px; }
+
 #main {
   background: #222;
   color: #fff;
   padding-left: 260px;
   width: 100%;
   padding-top: 73px; }
+  @media screen and (max-width: 480px) {
+    #main {
+      padding-left: 0; } }
   #main #first-view {
     position: relative; }
     #main #first-view img {
@@ -199,18 +225,30 @@ header {
       left: 5%;
       bottom: 5%;
       color: #fff; }
+      @media screen and (max-width: 480px) {
+        #main #first-view .top-title-area {
+          left: 5%;
+          bottom: 5%; } }
       #main #first-view .top-title-area h2 {
         font-size: 25px;
         letter-spacing: 0.5px; }
+        @media screen and (max-width: 480px) {
+          #main #first-view .top-title-area h2 {
+            font-size: 20px;
+            letter-spacing: 0.2px; } }
       #main #first-view .top-title-area h3 {
         font-size: 45px;
         border-bottom: 1px solid #fff; }
-  #main .wrap {
-    width: 90%;
-    margin: 5rem auto 0 auto;
-    max-width: 960px; }
+        @media screen and (max-width: 480px) {
+          #main #first-view .top-title-area h3 {
+            font-size: 55px;
+            border-bottom: 5px solid #fff;
+            line-height: 150%; } }
   #main .top-space {
     margin-top: 10rem; }
+    @media screen and (max-width: 480px) {
+      #main .top-space {
+        margin-top: 6rem; } }
   #main .section-title-area {
     margin-left: 4%;
     display: flex;
@@ -226,8 +264,14 @@ header {
     #main .section-title-area .title-area {
       margin-left: 2rem;
       font-family: 'Noto Serif JP', serif; }
+  #main #about p.sp-display {
+    line-height: 250%; }
   #main #pickup .new-items {
     width: 35%; }
+    @media screen and (max-width: 480px) {
+      #main #pickup .new-items {
+        width: 80%;
+        margin: 0 auto; } }
     #main #pickup .new-items dl {
       font-weight: 200;
       width: 100%;
@@ -237,12 +281,24 @@ header {
       #main #pickup .new-items dl dt {
         font-weight: 200;
         font-size: 24px; }
+        @media screen and (max-width: 480px) {
+          #main #pickup .new-items dl dt {
+            font-size: 18px; } }
       #main #pickup .new-items dl dd {
         font-size: 18px; }
+        @media screen and (max-width: 480px) {
+          #main #pickup .new-items dl dd {
+            font-size: 16px; } }
   #main #pickup .new-items:nth-of-type(2) {
     padding-top: 10rem; }
+    @media screen and (max-width: 480px) {
+      #main #pickup .new-items:nth-of-type(2) {
+        padding-top: 5rem; } }
   #main #product .items {
     width: calc((100% - 60px) / 4); }
+    @media screen and (max-width: 480px) {
+      #main #product .items {
+        width: calc((100% - 30px) / 2); } }
     #main #product .items dl {
       margin-top: 1rem;
       line-height: 200%; }
@@ -257,6 +313,9 @@ header {
   #main #news .items {
     width: calc((100% - 60px) / 3);
     margin-bottom: 2rem; }
+    @media screen and (max-width: 480px) {
+      #main #news .items {
+        width: calc((100% - 30px) / 2); } }
     #main #news .items dl {
       margin-top: 1rem;
       line-height: 200%; }
@@ -275,7 +334,7 @@ header {
     padding-top: 5rem;
     background-size: cover; }
     #main #story .background .slider-wrap {
-      width: 95%;
+      width: 85%;
       margin: 0 auto;
       max-width: 1180px; }
     #main #story .background .slider img {
@@ -298,25 +357,76 @@ header {
         #main #story .background .slick-current dl dd {
           line-height: 200%;
           font-size: 16px; }
-  #main #partner .banner {
-    width: 45%;
-    position: relative; }
-    #main #partner .banner .banner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -30%);
-      text-align: center;
-      font-family: 'Noto Serif JP', serif; }
-      #main #partner .banner .banner-text h6 {
-        font-size: 18px;
-        font-weight: 300;
-        white-space: nowrap; }
-      #main #partner .banner .banner-text p {
-        font-size: 24px;
-        margin-top: 5px;
-        white-space: nowrap;
-        font-weight: bold;
-        letter-spacing: 4px; }
-  #main footer {
-    border-top: 2px solid #fff; }
+  #main #partner {
+    padding-bottom: 3rem; }
+    #main #partner .banner {
+      width: 45%;
+      position: relative; }
+      @media screen and (max-width: 480px) {
+        #main #partner .banner {
+          width: 100%;
+          margin-bottom: 3rem; } }
+      #main #partner .banner .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        text-align: center;
+        font-family: 'Noto Serif JP', serif; }
+        #main #partner .banner .banner-text h6 {
+          font-size: 18px;
+          font-weight: 300;
+          white-space: nowrap; }
+          @media screen and (max-width: 480px) {
+            #main #partner .banner .banner-text h6 {
+              font-size: 16px; } }
+        #main #partner .banner .banner-text p {
+          font-size: 24px;
+          margin-top: 5px;
+          white-space: nowrap;
+          font-weight: bold;
+          letter-spacing: 4px; }
+          @media screen and (max-width: 480px) {
+            #main #partner .banner .banner-text p {
+              font-size: 22px; } }
+footer {
+  background: #222;
+  width: 100%;
+  border-top: 2px solid #fff;
+  padding: 2rem 0;
+  padding-left: 260px;
+  color: #fff; }
+  @media screen and (max-width: 480px) {
+    footer {
+      padding-left: 0; } }
+  footer .footer-wrap {
+    width: 90%;
+    margin: 5rem auto 0 auto;
+    max-width: 600px; }
+    @media screen and (max-width: 480px) {
+      footer .footer-wrap {
+        margin-top: 2rem; } }
+    footer .footer-wrap ul {
+      list-style-type: none; }
+      @media screen and (max-width: 480px) {
+        footer .footer-wrap ul:nth-of-type(1) {
+          margin-bottom: 3rem; } }
+      footer .footer-wrap ul li {
+        line-height: 200%;
+        font-size: 16px;
+        letter-spacing: 2px; }
+        footer .footer-wrap ul li:nth-of-type(1) {
+          margin-bottom: 2rem;
+          font-weight: bold;
+          font-size: 18px; }
+          @media screen and (max-width: 480px) {
+            footer .footer-wrap ul li:nth-of-type(1) {
+              margin-bottom: 1rem; } }
+        footer .footer-wrap ul li a {
+          color: #fff; }
+  footer .copy {
+    margin-top: 5rem; }
+    @media screen and (max-width: 480px) {
+      footer .copy {
+        margin-top: 1.5rem;
+        font-size: 14px; } }

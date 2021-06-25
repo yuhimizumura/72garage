@@ -2,9 +2,6 @@ body {
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 }
 
-.sp-display {
-  display: none;
-}
 
 p {
   font-size: 16px;
@@ -15,7 +12,31 @@ p {
   .pc-display {
     display: none;
   }
+
+  .sp-flex-column {
+    flex-direction: column;
+  }
+
+  .sp-full {
+    width: 100% !important;
+  }
+
+  .sp-75 {
+    width: 75% !important;
+  }
+
+  .sp-top {
+    margin-top:3rem;
+  }
 }
+
+@media screen and (min-width: 480px) {
+  .sp-display {
+    display: none;
+  }
+}
+
+
 
 @mixin font_icon($type : "") {
 
@@ -64,9 +85,18 @@ header {
     width: 60%;
     max-width: 200px;
     min-width: 120px;
+    @media screen and (max-width: 480px) {
+      max-width: 150px;
+    }
+
   }
   .user-area {
     width: 120px;
+
+    @media screen and (max-width: 480px) {
+      width: 60px;
+    }
+
     justify-content: space-around;
     i {
       font-size: 24px;
@@ -148,6 +178,10 @@ header {
   -webkit-overflow-scrolling: touch;
   height: calc(100% - 73px);
   padding-bottom: 80px;
+
+  @media screen and (max-width: 480px) {
+    left: -260px;
+  }
 
   .menu {
     padding-left: 0;
@@ -232,6 +266,13 @@ header {
   }
 }
 
+// ===========　全体Wrap ===========
+.wrap {
+  width: 90%;
+  margin: 5rem auto 0 auto;
+  max-width: 960px;
+}
+
 
 // メイン
 
@@ -241,6 +282,11 @@ header {
   padding-left: 260px;
   width: 100%;
   padding-top: 73px;
+
+  @media screen and (max-width: 480px) {
+    padding-left: 0;
+  }
+
 
   // =========== ファーストビュー ===========
   #first-view {
@@ -263,26 +309,38 @@ header {
       left: 5%;
       bottom: 5%;
       color: #fff;
+
+      @media screen and (max-width: 480px) {
+        left: 5%;
+        bottom: 5%;
+      }
+
+
       h2 {
         font-size: 25px;
         letter-spacing: 0.5px;
+        @media screen and (max-width: 480px) {
+          font-size: 20px;
+          letter-spacing: 0.2px;
+        }
       }
       h3 {
         font-size: 45px;
         border-bottom: 1px solid #fff;
+        @media screen and (max-width: 480px) {
+          font-size: 55px;
+          border-bottom: 5px solid #fff;
+          line-height: 150%;
+        }
       }
     }
   }
 
-  // ===========　全体Wrap ===========
-  .wrap {
-    width: 90%;
-    margin: 5rem auto 0 auto;
-    max-width: 960px;
-  }
-
   .top-space {
     margin-top: 10rem;
+    @media screen and (max-width: 480px) {
+      margin-top: 6rem;
+    }
   }
 
   // =========== セクションタイトル ===========
@@ -309,10 +367,20 @@ header {
 
   // =========== ABOUT ===========
 
+  #about {
+    p.sp-display {
+      line-height: 250%;
+    }
+  }
+
   // =========== PICKUP ===========
   #pickup {
     .new-items {
       width: 35%;
+      @media screen and (max-width: 480px) {
+        width: 80%;
+        margin: 0 auto;
+      }
       dl {
         font-weight: 200;
         width: 100%;
@@ -322,14 +390,23 @@ header {
         dt {
           font-weight: 200;
           font-size: 24px;
+          @media screen and (max-width: 480px) {
+            font-size: 18px;
+          }
         }
         dd {
           font-size: 18px;
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
         }
       }
     }
     .new-items:nth-of-type(2) {
       padding-top: 10rem;
+      @media screen and (max-width: 480px) {
+        padding-top: 5rem;
+      }
     }
   }
 
@@ -338,6 +415,9 @@ header {
   #product {
     .items {
       width: calc((100% - 60px) / 4);
+      @media screen and (max-width: 480px) {
+        width: calc((100% - 30px) / 2);
+      }
       dl {
         margin-top: 1rem;
         line-height: 200%;
@@ -362,6 +442,9 @@ header {
   #news {
     .items {
       width: calc((100% - 60px) / 3);
+      @media screen and (max-width: 480px) {
+        width: calc((100% - 30px) / 2);
+      }
       margin-bottom: 2rem;
       dl {
         margin-top: 1rem;
@@ -391,7 +474,7 @@ header {
       padding-top: 5rem;
       background-size: cover;
       .slider-wrap {
-        width: 95%;
+        width: 85%;
         margin: 0 auto;
         max-width: 1180px;
       }
@@ -429,9 +512,14 @@ header {
   }
 
   #partner {
+    padding-bottom: 3rem;
     .banner {
       width: 45%;
       position: relative;
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
       .banner-text {
         position: absolute;
         top: 50%;
@@ -443,6 +531,9 @@ header {
           font-size: 18px;
           font-weight: 300;
           white-space: nowrap;
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
         }
         p {
           font-size: 24px;
@@ -450,17 +541,68 @@ header {
           white-space: nowrap;
           font-weight: bold;
           letter-spacing: 4px;
+          @media screen and (max-width: 480px) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+  background: #222;
+  width: 100%;
+  border-top: 2px solid #fff;
+  padding: 2rem 0;
+  padding-left: 260px;
+  @media screen and (max-width: 480px) {
+    padding-left: 0;
+  }
+  color: #fff;
+  .footer-wrap {
+    width: 90%;
+    margin: 5rem auto 0 auto;
+    @media screen and (max-width: 480px) {
+      margin-top: 2rem;
+    }
+    max-width: 600px;
+    ul {
+      list-style-type: none;
+      @media screen and (max-width: 480px) {
+        &:nth-of-type(1) {
+          margin-bottom: 3rem;
+        }
+      }
+      li {
+        line-height: 200%;
+        font-size: 16px;
+        letter-spacing: 2px;
+        &:nth-of-type(1) {
+          margin-bottom: 2rem;
+          font-weight: bold;
+          font-size: 18px;
+          @media screen and (max-width: 480px) {
+            margin-bottom: 1rem;
+          }
+        }
+        a {
+          color: #fff;
         }
       }
     }
   }
 
-  footer {
-    border-top: 2px solid #fff;
+  .copy {
+    margin-top: 5rem;
+    @media screen and (max-width: 480px) {
+      margin-top: 1.5rem;
+      font-size: 14px;
+    }
   }
 
 }
-
 
 
 

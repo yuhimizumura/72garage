@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./cmn/css/cmn.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./cmn/css/slick.css">
     <link rel="stylesheet" href="./cmn/css/slick-theme.css">
+    <link rel="stylesheet" href="./cmn/css/cmn.css">
     <title>72GARAGE</title>
     <meta name="description" content="説明書き">
     <link rel="canonical" href="https://72garage.com/">
@@ -29,12 +29,43 @@
     <meta name="twitter:description" content="説明書き">
     <meta name="twitter:image" content="https://72garage.com/common/img/img_home01.png">
     <meta name="google-site-verification" content="P_CPpqKkBP644Xt6yEp0iCJxG9qq5MqoDkXWGsjZWmU" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            if ($(window).width() > 1180) {
+                $("#btn01").addClass("active")
+                $('.slider').slick({
+                    // autoplay: true,
+                    // autoplaySpeed: 4000,
+                    arrows: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    // prevArrow: "<div>前へ</div>",
+                    // nextArrow: "<div>次へ</div>"
+                });
+            } else {
+                $('.slider').slick({
+                    // autoplay: true,
+                    // autoplaySpeed: 4000,
+                    arrows: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    // prevArrow: "<div>前へ</div>",
+                    // nextArrow: "<div>次へ</div>"
+                });
+            }
+
+        })
+    </script>
 </head>
 
 <body>
 
-    <header class="d-flex align-items-center py-2 px-5">
-        <div class="btn-trigger active" id="btn01">
+    <header class="d-flex align-items-center py-2 px-3 px-lg-5">
+        <div class="btn-trigger" id="btn01">
             <span></span>
             <span></span>
             <span></span>
@@ -44,15 +75,15 @@
         </div>
         <div class="text-white d-flex align-items-center justify-content-between user-area">
             <a href="#" class="text-white">
-                <dl class="text-center mb-0 mt-1">
+                <dl class="text-center mb-0 mt-1 ml-auto">
                     <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
-                    <dd class="mb-0">ログイン</dd>
+                    <dd class="mb-0 pc-display">ログイン</dd>
                 </dl>
             </a>
             <a href="#" class="text-white">
                 <dl class="text-center mb-0 mt-1">
                     <dt class="d-inline-block mb-1"><i class="fas fa-shopping-cart"></i></dt>
-                    <dd class="mb-0">カート</dd>
+                    <dd class="mb-0 pc-display">カート</dd>
                 </dl>
             </a>
         </div>
@@ -129,8 +160,10 @@
                 <img src="./cmn/img/img_top01.jpg" alt="" class="w-100">
                 <div class="mask"></div>
                 <div class="top-title-area">
-                    <h2>完全ハンドメイド、走りを変える至高のパーツ店</h2>
-                    <h3>SPECIAL CARBON PARTS</h3>
+                    <h2 class="pc-display">完全ハンドメイド、走りを変える至高のパーツ店</h2>
+                    <h2 class="sp-display">完全ハンドメイド<br>走りを変える至高のパーツ店</h2>
+                    <h3 class="pc-display">SPECIAL CARBON PARTS</h3>
+                    <h3 class="sp-display">SPECIAL<br>CARBON<br>PARTS</h3>
                 </div>
             </section>
 
@@ -145,7 +178,7 @@
                 </div>
 
                 <div class="wrap">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center sp-flex-column">
                         <p class="pc-display">
                             ここで72GARAGEの紹介文を書きます。<br />
                             簡潔におおよそ５行程度に収まるような内容<br />
@@ -161,8 +194,7 @@
                             これはサンプルテキストです。
                         </p>
 
-
-                        <img class="ml-auto d-block w-50" src="./cmn/img/img_about01.jpg" alt="">
+                        <img class="ml-auto d-block w-50 sp-full sp-top" src="./cmn/img/img_about01.jpg" alt="">
 
                     </div>
                 </div>
@@ -177,7 +209,7 @@
                     </dl>
                 </div>
 
-                <div class="d-flex wrap justify-content-between">
+                <div class="d-flex wrap justify-content-between sp-flex-column">
                     <div class="new-items">
                         <img class="" src="./cmn/img/img_new01.jpg" alt="">
                         <dl>
@@ -504,7 +536,7 @@
                     </dl>
                 </div>
 
-                <div class="d-flex wrap justify-content-between">
+                <div class="d-flex wrap justify-content-between sp-flex-column">
                     <div class="banner">
                         <img src="./cmn/img/img_bunner01.png" alt="">
                         <div class="banner-text">
@@ -521,19 +553,33 @@
                     </div>
                 </div>
             </section>
-
         </div><!-- #main -->
-
-        
-
     </main>
 
+    <footer>
+        <div class="footer-wrap d-flex justify-content-between sp-flex-column">
+            <ul>
+                <li>INFORMATION</li>
+                <li><a href="#">特定商取引に基づく表記</a></li>
+                <li><a href="#">個人情報の取扱目的</a></li>
+                <li><a href="#">取扱店舗</a></li>
+                <li><a href="#">会社概要</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+            <ul>
+                <li>SHOPPING</li>
+                <li><a href="#">お支払いについて</a></li>
+                <li><a href="#">配送・配送料について</a></li>
+                <li><a href="#">返品・交換について</a></li>
+            </ul>
+        </div>
+        <p class="text-center copy">© 72GARAGE PRODUCT ONLINE STORE</p>
+    </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d8f4e2d3a6.js" crossorigin="anonymous"></script>
-    <script src="cmn/js/slick.min.js"></script>
+    <script src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/js/slick.min.js"></script>
     <!-- アコーディオンメニュー -->
     <script>
         $(function(){
@@ -549,7 +595,6 @@
 
     <script>
         $(function(){
-
             //読み込んだサイズが1180px以下ならメニューを閉じておく
             $(window).resize(function() {
                 if ($(window).width() < 1180) {
@@ -570,45 +615,37 @@
                     })
                 }
             })
-
-
-
-            $("#btn01").on("click",function(){
-                $(this).toggleClass("active")
-                //activeクラスの状態に応じてwidthを変更
-                if ($(this).hasClass("active")) {
-                    $("#side-menu").animate({
-                        "left":"0"
-                    })
-                    $("#main").animate({
-                        "padding-left":"260px"
-                    })
-                } else {
-                    $("#side-menu").animate({
-                        "left":"-260px"
-                    })
-                    $("#main").animate({
-                        "padding-left":"0"
-                    })
-                }
-
-            })
         });
     </script>
 
     <script>
-        $(function() {
-            $('.slider').slick({
-                // autoplay: true,
-                // autoplaySpeed: 4000,
-                arrows: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                // prevArrow: "<div>前へ</div>",
-                // nextArrow: "<div>次へ</div>"
-            });
+        $("#btn01").on("click",function(){
+            $(this).toggleClass("active")
+            //activeクラスの状態に応じてwidthを変更
+            if ($(this).hasClass("active")) {
+                $("#side-menu").animate({
+                    "left":"0"
+                })
+                $("#main").animate({
+                    "padding-left":"260px"
+                })
+                $("footer").animate({
+                    "padding-left":"260px"
+                })
+            } else {
+                $("#side-menu").animate({
+                    "left":"-260px"
+                })
+                $("#main").animate({
+                    "padding-left":"0"
+                })
+                $("footer").animate({
+                    "padding-left":"0"
+                })
+            }
         })
     </script>
+
+
 </body>
 </html>
