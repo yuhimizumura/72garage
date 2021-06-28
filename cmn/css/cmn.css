@@ -2,6 +2,56 @@
 body {
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif; }
 
+.top-title {
+  overflow: hidden;
+  transform: translate(-140%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif; }
+  .top-title span {
+    display: block;
+    transform: translate(140%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+
+.top-title.-visible,
+.top-title.-visible span {
+  transform: translate(0, 0); }
+
+.bx-wrapper {
+  border: none; }
+
+.loading-fadeIn {
+  opacity: 0;
+  animation: loading-fadeIn 3s ease 0.3s 1 forwards; }
+
+@keyframes loading-fadeIn {
+  /*animetion-nameで設定した値を書く*/
+  0% {
+    opacity: 0; }
+  /*アニメーション開始時は不透明度0%*/
+  100% {
+    opacity: 1; }
+  /*アニメーション終了時は不透明度100%*/ }
+
+#load_animation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999999999;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #load_animation .loading_gif {
+    padding: 50px 0; }
+    #load_animation .loading_gif img {
+      width: 150px;
+      height: auto;
+      display: none; }
+
 p {
   font-size: 16px;
   line-height: 200%; }
@@ -18,8 +68,14 @@ p {
   .sp-top {
     margin-top: 3rem; } }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  .pc-display {
+    display: none; } }
+
+@media screen and (min-width: 641px) {
   .sp-display {
+    display: none; }
+  .tb-display {
     display: none; } }
 
 img {
@@ -39,13 +95,13 @@ header {
     width: 60%;
     max-width: 200px;
     min-width: 120px; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       header .logo {
         max-width: 150px; } }
   header .user-area {
     width: 120px;
     justify-content: space-around; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       header .user-area {
         width: 60px; } }
     header .user-area i {
@@ -213,7 +269,8 @@ header {
       height: calc(100vh - 73px); }
     #main #first-view .mask {
       width: 100%;
-      background: #222222;
+      background-image: url("../img/texture.png");
+      background-repeat: repeat;
       opacity: 0.6;
       position: absolute;
       top: 0;
@@ -231,7 +288,8 @@ header {
           bottom: 5%; } }
       #main #first-view .top-title-area h2 {
         font-size: 25px;
-        letter-spacing: 0.5px; }
+        letter-spacing: 0.5px;
+        line-height: 150%; }
         @media screen and (max-width: 480px) {
           #main #first-view .top-title-area h2 {
             font-size: 20px;
@@ -239,7 +297,7 @@ header {
       #main #first-view .top-title-area h3 {
         font-size: 45px;
         border-bottom: 1px solid #fff; }
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 640px) {
           #main #first-view .top-title-area h3 {
             font-size: 55px;
             border-bottom: 5px solid #fff;
@@ -264,6 +322,16 @@ header {
     #main .section-title-area .title-area {
       margin-left: 2rem;
       font-family: 'Noto Serif JP', serif; }
+  @media screen and (max-width: 640px) {
+    #main #about .tb-flex-column {
+      flex-direction: column; }
+      #main #about .tb-flex-column img {
+        width: 90% !important;
+        margin: 0 auto; } }
+  @media screen and (max-width: 640px) {
+    #main #about p {
+      font-size: 18px;
+      margin-bottom: 2rem; } }
   #main #about p.sp-display {
     line-height: 250%; }
   #main #pickup .new-items {
@@ -299,6 +367,9 @@ header {
         padding-top: 5rem; } }
   #main #product .items {
     width: calc((100% - 60px) / 4); }
+    @media screen and (max-width: 768px) {
+      #main #product .items {
+        width: calc((100% - 60px) / 3); } }
     @media screen and (max-width: 480px) {
       #main #product .items {
         width: calc((100% - 30px) / 2); } }
@@ -316,7 +387,7 @@ header {
   #main #news .items {
     width: calc((100% - 60px) / 3);
     margin-bottom: 2rem; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       #main #news .items {
         width: calc((100% - 30px) / 2); } }
     #main #news .items dl {
@@ -341,7 +412,8 @@ header {
       margin: 0 auto;
       max-width: 1180px; }
     #main #story .background .slider img {
-      width: 100%; }
+      width: 100%;
+      height: 270px; }
     #main #story .background .slick-slide {
       transform: scale(0.8);
       opacity: 0.6; }
@@ -362,12 +434,21 @@ header {
           font-size: 16px; }
   #main #partner {
     padding-bottom: 3rem; }
+    @media screen and (max-width: 640px) {
+      #main #partner .tb-flex-column {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto; } }
     #main #partner .banner {
       width: 45%;
       position: relative; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 640px) {
         #main #partner .banner {
           width: 100%;
+          margin-bottom: 3rem; } }
+      @media screen and (min-width: 641px) {
+        #main #partner .banner {
+          width: 45%;
           margin-bottom: 3rem; } }
       #main #partner .banner .banner-text {
         position: absolute;
@@ -380,18 +461,24 @@ header {
           font-size: 18px;
           font-weight: 300;
           white-space: nowrap; }
-          @media screen and (max-width: 480px) {
+          @media screen and (max-width: 640px) {
             #main #partner .banner .banner-text h6 {
               font-size: 16px; } }
+          @media screen and (min-width: 641px) {
+            #main #partner .banner .banner-text h6 {
+              font-size: 12px; } }
         #main #partner .banner .banner-text p {
           font-size: 24px;
           margin-top: 5px;
           white-space: nowrap;
           font-weight: bold;
           letter-spacing: 4px; }
-          @media screen and (max-width: 480px) {
+          @media screen and (max-width: 640px) {
             #main #partner .banner .banner-text p {
               font-size: 22px; } }
+          @media screen and (min-width: 641px) {
+            #main #partner .banner .banner-text p {
+              font-size: 14px; } }
 footer {
   background: #222;
   width: 100%;

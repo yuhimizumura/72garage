@@ -6,11 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="./cmn/css/slick.css">
     <link rel="stylesheet" href="./cmn/css/slick-theme.css">
     <link rel="stylesheet" href="./cmn/css/cmn.css">
+
     <title>72GARAGE</title>
     <meta name="description" content="説明書き">
     <link rel="canonical" href="https://72garage.com/">
@@ -28,159 +32,208 @@
     <meta name="twitter:title" content="72GARAGE">
     <meta name="twitter:description" content="説明書き">
     <meta name="twitter:image" content="https://72garage.com/common/img/img_home01.png">
-    <meta name="google-site-verification" content="P_CPpqKkBP644Xt6yEp0iCJxG9qq5MqoDkXWGsjZWmU" />
+    <meta name="google-site-verification" content="P_CPpqKkBP644Xt6yEp0iCJxG9qq5MqoDkXWGsjZWmU"/>
 </head>
 
 <body>
 
-    <header class="d-flex align-items-center py-2 px-3 px-lg-5">
-        <div class="btn-trigger" id="btn01">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logo mx-auto">
-            <img src="./cmn/img/logo_top01.png" alt="">
-        </div>
-        <div class="text-white d-flex align-items-center justify-content-between user-area">
-            <a href="#" class="text-white">
-                <dl class="text-center mb-0 mt-1 ml-auto">
-                    <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
-                    <dd class="mb-0 pc-display">ログイン</dd>
-                </dl>
-            </a>
-            <a href="#" class="text-white">
-                <dl class="text-center mb-0 mt-1">
-                    <dt class="d-inline-block mb-1"><i class="fas fa-shopping-cart"></i></dt>
-                    <dd class="mb-0 pc-display">カート</dd>
-                </dl>
-            </a>
-        </div>
-    </header>
+<div id="load_animation">
+    <div class="loading_gif">
+        <img id="logo" src="./cmn/img/img_logo_w.svg" alt="">
+    </div>
+</div>
 
-    <main class="d-flex">
-        <div id="side-menu">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">HONDA</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">YAMAHA</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">SUZUKI</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">KAWASAKI</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="icon-list d-flex justify-content-between text-center ">
-                <li><a href="#"><i class="fab circle fa-twitter d-block"></i>twitter</a></li>
-                <li><a href="#"><i class="fab circle fa-instagram-square d-block"></i>instagram</a></li>
-                <li><a href="#"><i class="fab circle fa-facebook-square d-block"></i>facebook</a></li>
-            </ul>
-        </div>
-        <div id="main">
-            <section id="first-view">
-                <img src="./cmn/img/img_top01.jpg" alt="" class="w-100">
-                <div class="mask"></div>
-                <div class="top-title-area">
-                    <h2 class="pc-display">完全ハンドメイド、走りを変える至高のパーツ店</h2>
-                    <h2 class="sp-display">完全ハンドメイド<br>走りを変える至高のパーツ店</h2>
-                    <h3 class="pc-display">SPECIAL CARBON PARTS</h3>
-                    <h3 class="sp-display">SPECIAL<br>CARBON<br>PARTS</h3>
+<header class="d-flex align-items-center py-2 px-3 px-lg-5">
+    <div class="btn-trigger" id="btn01">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="logo mx-auto">
+        <img src="./cmn/img/logo_top01.png" alt="">
+    </div>
+    <div class="text-white d-flex align-items-center justify-content-between user-area">
+        <a href="#" class="text-white">
+            <dl class="text-center mb-0 mt-1 ml-auto">
+                <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
+                <dd class="mb-0 pc-display">ログイン</dd>
+            </dl>
+        </a>
+        <a href="#" class="text-white">
+            <dl class="text-center mb-0 mt-1">
+                <dt class="d-inline-block mb-1"><i class="fas fa-shopping-cart"></i></dt>
+                <dd class="mb-0 pc-display">カート</dd>
+            </dl>
+        </a>
+    </div>
+</header>
+
+<main class="d-flex">
+    <div id="side-menu">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">HONDA</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">YAMAHA</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">SUZUKI</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">KAWASAKI</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="icon-list d-flex justify-content-between text-center ">
+            <li><a href="#"><i class="fab circle fa-twitter d-block"></i>twitter</a></li>
+            <li><a href="#"><i class="fab circle fa-instagram-square d-block"></i>instagram</a></li>
+            <li><a href="#"><i class="fab circle fa-facebook-square d-block"></i>facebook</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <section id="first-view">
+            <div class="top-slider">
+                <img src="./cmn/img/img_top01.jpg" alt="">
+                <img src="./cmn/img/img_top02.jpg" alt="">
+                <img src="./cmn/img/img_top03.jpg" alt="">
+                <img src="./cmn/img/img_top04.jpg" alt="">
+                <img src="./cmn/img/img_top05.jpg" alt="">
+            </div>
+            <div class="mask"></div>
+            <div class="top-title-area">
+                <h2 class="pc-display top-title"><span>完全ハンドメイド、走りを変える至高のパーツ店</span></h2>
+                <h2 class="sp-display tb-display top-title"><span>完全ハンドメイド<br>走りを変える至高のパーツ店</span></h2>
+                <h3 class="pc-display top-title">
+                    <span>SPECIAL CARBON PARTS</span>
+                </h3>
+                <h3 class="sp-display tb-display top-title"><span>SPECIAL<br>CARBON<br>PARTS</span></h3>
+            </div>
+        </section>
+
+
+        <section id="about" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>72garageとは？</dt>
+                    <dd>About</dd>
+                </dl>
+            </div>
+
+            <div class="wrap">
+                <div class="d-flex align-items-center sp-flex-column tb-flex-column">
+                    <p class="pc-display">
+                        ここで72GARAGEの紹介文を書きます。<br/>
+                        簡潔におおよそ５行程度に収まるような内容<br/>
+                        で記述すると良いかもしれません。<br/>
+                        得意なこと、熱意など記述すると良いと思います。<br/>
+                        これはサンプルテキストです。<br/>
+                    </p>
+                    <p class="sp-display">
+                        ここで72GARAGEの紹介文を書きます。
+                        簡潔におおよそ５行程度に収まるような内容
+                        で記述すると良いかもしれません。
+                        得意なこと、熱意など記述すると良いと思います。
+                        これはサンプルテキストです。
+                    </p>
+
+                    <img class="ml-auto d-block w-50 sp-full sp-top" src="./cmn/img/img_about01.jpg" alt="">
+
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <section id="pickup" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>おすすめ商品</dt>
+                    <dd>PICKUP</dd>
+                </dl>
+            </div>
 
-            <section id="about" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>72garageとは？</dt>
-                        <dd>About</dd>
+            <div class="d-flex wrap justify-content-between sp-flex-column">
+                <div class="new-items">
+                    <img class="" src="./cmn/img/img_new01.jpg" alt="">
+                    <dl>
+                        <dt>
+                            <span>車種名</span>
+                            <span class="pl-2">商品名1</span>
+                        </dt>
+                        <dd>¥30,000 / 税込</dd>
                     </dl>
                 </div>
 
-                <div class="wrap">
-                    <div class="d-flex align-items-center sp-flex-column">
-                        <p class="pc-display">
-                            ここで72GARAGEの紹介文を書きます。<br />
-                            簡潔におおよそ５行程度に収まるような内容<br />
-                            で記述すると良いかもしれません。<br />
-                            得意なこと、熱意など記述すると良いと思います。<br />
-                            これはサンプルテキストです。<br />
-                        </p>
-                        <p class="sp-display">
-                            ここで72GARAGEの紹介文を書きます。
-                            簡潔におおよそ５行程度に収まるような内容
-                            で記述すると良いかもしれません。
-                            得意なこと、熱意など記述すると良いと思います。
-                            これはサンプルテキストです。
-                        </p>
-
-                        <img class="ml-auto d-block w-50 sp-full sp-top" src="./cmn/img/img_about01.jpg" alt="">
-
-                    </div>
-                </div>
-            </section>
-
-            <section id="pickup" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>おすすめ商品</dt>
-                        <dd>PICKUP</dd>
+                <div class="new-items">
+                    <img class="" src="./cmn/img/img_new02.jpg" alt="">
+                    <dl>
+                        <dt>
+                            <span>車種名</span>
+                            <span class="pl-2">商品名2</span>
+                        </dt>
+                        <dd>¥25,000 / 税込</dd>
                     </dl>
                 </div>
+            </div>
+        </section>
 
-                <div class="d-flex wrap justify-content-between sp-flex-column">
-                    <div class="new-items">
-                        <img class="" src="./cmn/img/img_new01.jpg" alt="">
+        <section id="product" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>定番商品</dt>
+                    <dd>PRODUCT</dd>
+                </dl>
+            </div>
+
+            <div class="wrap">
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_products01.jpg" alt="">
                         <dl>
                             <dt>
                                 <span>車種名</span>
@@ -190,8 +243,8 @@
                         </dl>
                     </div>
 
-                    <div class="new-items">
-                        <img class="" src="./cmn/img/img_new02.jpg" alt="">
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_products02.jpg" alt="">
                         <dl>
                             <dt>
                                 <span>車種名</span>
@@ -200,161 +253,126 @@
                             <dd>¥25,000 / 税込</dd>
                         </dl>
                     </div>
-                </div>
-            </section>
 
-            <section id="product" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>定番商品</dt>
-                        <dd>PRODUCT</dd>
-                    </dl>
-                </div>
-
-                <div class="wrap">
-                    <div class="d-flex flex-wrap justify-content-between">
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_products01.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>車種名</span>
-                                    <span class="pl-2">商品名1</span>
-                                </dt>
-                                <dd>¥30,000 / 税込</dd>
-                            </dl>
-                        </div>
-
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_products02.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>車種名</span>
-                                    <span class="pl-2">商品名2</span>
-                                </dt>
-                                <dd>¥25,000 / 税込</dd>
-                            </dl>
-                        </div>
-
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_products03.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>車種名</span>
-                                    <span class="pl-2">商品名1</span>
-                                </dt>
-                                <dd>¥30,000 / 税込</dd>
-                            </dl>
-                        </div>
-
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_products04.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>車種名</span>
-                                    <span class="pl-2">商品名1</span>
-                                </dt>
-                                <dd>¥30,000 / 税込</dd>
-                            </dl>
-                        </div>
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_products03.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>車種名</span>
+                                <span class="pl-2">商品名1</span>
+                            </dt>
+                            <dd>¥30,000 / 税込</dd>
+                        </dl>
                     </div>
 
-                    <p class="text-right">
-                        <a href="">VIEW MORE <i class="fas fa-arrow-right"></i></a>
-                    </p>
-                </div>
-            </section>
-
-            <section id="news" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>72GARAGEの活動</dt>
-                        <dd>NEWS</dd>
-                    </dl>
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_products04.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>車種名</span>
+                                <span class="pl-2">商品名1</span>
+                            </dt>
+                            <dd>¥30,000 / 税込</dd>
+                        </dl>
+                    </div>
                 </div>
 
-                <div class="wrap">
-                    <div class="d-flex flex-wrap justify-content-between">
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_news01.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>ニュースタイトル</span>
-                                </dt>
-                                <dd>キャッチコピーのようなひとこと</dd>
-                            </dl>
-                        </div>
+                <p class="text-right">
+                    <a href="">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+        </section>
 
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_news02.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>ニュースタイトル</span>
-                                </dt>
-                                <dd>キャッチコピーのようなひとこと</dd>
-                            </dl>
-                        </div>
+        <section id="news" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>72GARAGEの活動</dt>
+                    <dd>NEWS</dd>
+                </dl>
+            </div>
 
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_news03.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>ニュースタイトル</span>
-                                </dt>
-                                <dd>キャッチコピーのようなひとこと</dd>
-                            </dl>
-                        </div>
-
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_news04.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>ニュースタイトル</span>
-                                </dt>
-                                <dd>キャッチコピーのようなひとこと</dd>
-                            </dl>
-                        </div>
-
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_news05.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>ニュースタイトル</span>
-                                </dt>
-                                <dd>キャッチコピーのようなひとこと</dd>
-                            </dl>
-                        </div>
-
-                        <div class="items">
-                            <img class="" src="./cmn/img/img_news06.jpg" alt="">
-                            <dl>
-                                <dt>
-                                    <span>ニュースタイトル</span>
-                                </dt>
-                                <dd>キャッチコピーのようなひとこと</dd>
-                            </dl>
-                        </div>
+            <div class="wrap">
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_news01.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>ニュースタイトル</span>
+                            </dt>
+                            <dd>キャッチコピーのようなひとこと</dd>
+                        </dl>
                     </div>
 
-                    <p class="text-right">
-                        <a href="">VIEW MORE <i class="fas fa-arrow-right"></i></a>
-                    </p>
-                </div>
-            </section>
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_news02.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>ニュースタイトル</span>
+                            </dt>
+                            <dd>キャッチコピーのようなひとこと</dd>
+                        </dl>
+                    </div>
 
-            <section id="story" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>72GARAGEができるまで</dt>
-                        <dd>STORY</dd>
-                    </dl>
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_news03.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>ニュースタイトル</span>
+                            </dt>
+                            <dd>キャッチコピーのようなひとこと</dd>
+                        </dl>
+                    </div>
+
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_news04.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>ニュースタイトル</span>
+                            </dt>
+                            <dd>キャッチコピーのようなひとこと</dd>
+                        </dl>
+                    </div>
+
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_news05.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>ニュースタイトル</span>
+                            </dt>
+                            <dd>キャッチコピーのようなひとこと</dd>
+                        </dl>
+                    </div>
+
+                    <div class="items">
+                        <img class="" src="./cmn/img/img_news06.jpg" alt="">
+                        <dl>
+                            <dt>
+                                <span>ニュースタイトル</span>
+                            </dt>
+                            <dd>キャッチコピーのようなひとこと</dd>
+                        </dl>
+                    </div>
                 </div>
 
-                <div class="background">
-                    <div class="slider-wrap">
-                        <div class="slider pt-5">
+                <p class="text-right">
+                    <a href="">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+        </section>
+
+        <section id="story" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>72GARAGEができるまで</dt>
+                    <dd>STORY</dd>
+                </dl>
+            </div>
+
+            <div class="background">
+                <div class="slider-wrap">
+                    <div class="slider pt-5">
                         <div>
                             <img src="./cmn/img/img_story01.jpg" alt="">
                             <dl>
@@ -476,180 +494,246 @@
                             </dl>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="review" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>お客様の声</dt>
+                    <dd>REVIEW</dd>
+                </dl>
+            </div>
+
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <div class="wrap">
+                <iframe src="https://snapwidget.com/embed/945409" class="snapwidget-widget" allowtransparency="true"
+                        frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+            </div>
+        </section>
+
+        <section id="partner" class="top-space">
+            <div class="section-title-area">
+                <div class="line"></div>
+                <dl class="title-area">
+                    <dt>販売パートナー募集</dt>
+                    <dd>PARTNER</dd>
+                </dl>
+            </div>
+
+            <div class="d-flex wrap justify-content-between sp-flex-column tb-flex-column">
+                <div class="banner">
+                    <img src="./cmn/img/img_bunner01.png" alt="">
+                    <div class="banner-text">
+                        <h6>販売代理店募集中</h6>
+                        <p>SALES AGENT</p>
                     </div>
                 </div>
-            </section>
-
-            <section id="review" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>お客様の声</dt>
-                        <dd>REVIEW</dd>
-                    </dl>
-                </div>
-
-                <!-- SnapWidget -->
-                <script src="https://snapwidget.com/js/snapwidget.js"></script>
-                <div class="wrap">
-                    <iframe src="https://snapwidget.com/embed/945409" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
-                </div>
-            </section>
-
-            <section id="partner" class="top-space">
-                <div class="section-title-area">
-                    <div class="line"></div>
-                    <dl class="title-area">
-                        <dt>販売パートナー募集</dt>
-                        <dd>PARTNER</dd>
-                    </dl>
-                </div>
-
-                <div class="d-flex wrap justify-content-between sp-flex-column">
-                    <div class="banner">
-                        <img src="./cmn/img/img_bunner01.png" alt="">
-                        <div class="banner-text">
-                            <h6>販売代理店募集中</h6>
-                            <p>SALES AGENT</p>
-                        </div>
-                    </div>
-                    <div class="banner">
-                        <img src="./cmn/img/img_bunner02.png" alt="">
-                        <div class="banner-text">
-                            <h6>スポンサー契約募集中</h6>
-                            <p>SPONSORED CONTRACT</p>
-                        </div>
+                <div class="banner">
+                    <img src="./cmn/img/img_bunner02.png" alt="">
+                    <div class="banner-text">
+                        <h6>スポンサー契約募集中</h6>
+                        <p>SPONSORED CONTRACT</p>
                     </div>
                 </div>
-            </section>
-        </div><!-- #main -->
-    </main>
+            </div>
+        </section>
+    </div><!-- #main -->
+</main>
 
-    <footer>
-        <div class="footer-wrap d-flex justify-content-between sp-flex-column">
-            <ul>
-                <li>INFORMATION</li>
-                <li><a href="#">特定商取引に基づく表記</a></li>
-                <li><a href="#">個人情報の取扱目的</a></li>
-                <li><a href="#">取扱店舗</a></li>
-                <li><a href="#">会社概要</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-            <ul>
-                <li>SHOPPING</li>
-                <li><a href="#">お支払いについて</a></li>
-                <li><a href="#">配送・配送料について</a></li>
-                <li><a href="#">返品・交換について</a></li>
-            </ul>
-        </div>
-        <p class="text-center copy">© 72GARAGE PRODUCT ONLINE STORE</p>
-    </footer>
+<footer>
+    <div class="footer-wrap d-flex justify-content-between sp-flex-column">
+        <ul>
+            <li>INFORMATION</li>
+            <li><a href="#">特定商取引に基づく表記</a></li>
+            <li><a href="#">個人情報の取扱目的</a></li>
+            <li><a href="#">取扱店舗</a></li>
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <ul>
+            <li>SHOPPING</li>
+            <li><a href="#">お支払いについて</a></li>
+            <li><a href="#">配送・配送料について</a></li>
+            <li><a href="#">返品・交換について</a></li>
+        </ul>
+    </div>
+    <p class="text-center copy">© 72GARAGE PRODUCT ONLINE STORE</p>
+</footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d8f4e2d3a6.js" crossorigin="anonymous"></script>
-    <script src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/js/slick.min.js"></script>
-    <script>
-        $(function() {
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d8f4e2d3a6.js" crossorigin="anonymous"></script>
+<script src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/js/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+    $(function () {
 
-            if ($(window).width() > 1180) {
-                $("#btn01").addClass("active")
-                $('.slider').slick({
-                    // autoplay: true,
-                    // autoplaySpeed: 4000,
-                    arrows: true,
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    // prevArrow: "<div>前へ</div>",
-                    // nextArrow: "<div>次へ</div>"
-                });
-            } else {
-                $('.slider').slick({
-                    // autoplay: true,
-                    // autoplaySpeed: 4000,
-                    arrows: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    // prevArrow: "<div>前へ</div>",
-                    // nextArrow: "<div>次へ</div>"
-                });
-            }
+        $('.top-slider').bxSlider({
+            auto: true,
+            speed: 1000,
+            controls:false
+        });
 
-        })
-    </script>
-    <!-- アコーディオンメニュー -->
-    <script>
-        $(function(){
-            $('.js-menu__item__link').each(function(){
-                $(this).on('click',function(){
-                    $(this).toggleClass('on');
-                    $("+.submenu",this).slideToggle();
-                    return false;
-                });
+        if ($(window).width() > 1180) {
+            $("#btn01").addClass("active")
+            $('.slider').slick({
+                // autoplay: true,
+                // autoplaySpeed: 4000,
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                // prevArrow: "<div>前へ</div>",
+                // nextArrow: "<div>次へ</div>"
+            });
+        } else {
+            $('.slider').slick({
+                // autoplay: true,
+                // autoplaySpeed: 4000,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                // prevArrow: "<div>前へ</div>",
+                // nextArrow: "<div>次へ</div>"
+            });
+        }
+
+    })
+</script>
+<!-- アコーディオンメニュー -->
+<script>
+    $(function () {
+        $('.js-menu__item__link').each(function () {
+            $(this).on('click', function () {
+                $(this).toggleClass('on');
+                $("+.submenu", this).slideToggle();
+                return false;
             });
         });
-    </script>
+    });
+</script>
 
-    <script>
-        $(function(){
-            //読み込んだサイズが1180px以下ならメニューを閉じておく
-            $(window).resize(function() {
-                size()
-            })
-        });
-
-        function size() {
-            if ($(window).width() < 1180) {
-                $("#btn01").removeClass("active")
-                $("#side-menu").animate({
-                    "left":"-260px"
-                })
-                $("#main").animate({
-                    "padding-left":"0"
-                })
-            } else {
-                $("#btn01").addClass("active")
-                $("#side-menu").animate({
-                    "left":"0"
-                })
-                $("#main").animate({
-                    "padding-left":"260px"
-                })
-            }
-        }
-    </script>
-
-    <script>
-        $("#btn01").on("click",function(){
-            $(this).toggleClass("active")
-            //activeクラスの状態に応じてwidthを変更
-            if ($(this).hasClass("active")) {
-                $("#side-menu").animate({
-                    "left":"0"
-                })
-                $("#main").animate({
-                    "padding-left":"260px"
-                })
-                $("footer").animate({
-                    "padding-left":"260px"
-                })
-            } else {
-                $("#side-menu").animate({
-                    "left":"-260px"
-                })
-                $("#main").animate({
-                    "padding-left":"0"
-                })
-                $("footer").animate({
-                    "padding-left":"0"
-                })
-            }
+<script>
+    $(function () {
+        //読み込んだサイズが1180px以下ならメニューを閉じておく
+        $(window).resize(function () {
+            size()
         })
-    </script>
+    });
 
+    function size() {
+        if ($(window).width() < 1180) {
+            $("#btn01").removeClass("active")
+            $("#side-menu").animate({
+                "left": "-260px"
+            })
+            $("#main").animate({
+                "padding-left": "0"
+            })
+        } else {
+            $("#btn01").addClass("active")
+            $("#side-menu").animate({
+                "left": "0"
+            })
+            $("#main").animate({
+                "padding-left": "260px"
+            })
+        }
+    }
+</script>
+
+<script>
+    $("#btn01").on("click", function () {
+        $(this).toggleClass("active")
+        //activeクラスの状態に応じてwidthを変更
+        if ($(this).hasClass("active")) {
+            $("#side-menu").animate({
+                "left": "0"
+            })
+            $("#main").animate({
+                "padding-left": "260px"
+            })
+            $("footer").animate({
+                "padding-left": "260px"
+            })
+        } else {
+            $("#side-menu").animate({
+                "left": "-260px"
+            })
+            $("#main").animate({
+                "padding-left": "0"
+            })
+            $("footer").animate({
+                "padding-left": "0"
+            })
+        }
+    })
+</script>
+
+<script>
+    $(function () {
+        let $window = $(window),
+            $load = $('#load_animation'),
+            $load_in = $load.find('img');
+        var count = 0;
+
+        //ロゴとLoadingGIFをフェードイン
+        $load_in.fadeIn('slow');
+
+        setInterval(function () {
+            count++;
+            if (count > 360) {
+                count = 0;
+            } else {
+                $("#logo").css("transform", "rotate(" + count + "deg)");
+            }
+        }, 1);
+
+        //ウィンドウに対してloadイベントを設定
+        //全ての要素をロードが終わったら，HideLoadingScreen()を実行する
+        $window.on('load', function () {
+            HideLoadingScreen();
+        })
+
+        //５秒後に強制的にHideLoadingScreen()を実行
+        setTimeout(function () {
+            HideLoadingScreen();
+        }, 5000);
+
+        //ロード画面を非表示にする関数
+        function HideLoadingScreen() {
+            $load.delay(1500).fadeOut("slow");
+            $("#logo").delay(1000).fadeOut();
+            titleAnimation()
+        }
+
+        function titleAnimation() {
+            const CLASSNAME = "-visible";
+            const DELAY = 100;
+            const $target1 = $(".top-title");
+            const $target2 = $(".sentence");
+
+            setInterval(() => {
+                $target1.addClass(CLASSNAME);
+                setTimeout(() => {
+                    $target2.addClass(CLASSNAME);
+                }, DELAY);
+            }, 2000);
+        }
+    });
+</script>
+
+<script>
+
+</script>
 
 </body>
 </html>
