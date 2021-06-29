@@ -2,6 +2,10 @@ body {
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .top-title {
   overflow: hidden;
   transform: translate(-140%, 0);
@@ -32,7 +36,7 @@ body {
 }
 
 .bx-wrapper {
-  border: none;
+  border: none !important;
 }
 
 .loading-fadeIn {
@@ -256,7 +260,7 @@ header {
   background: #fff;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: calc(100% - 73px);
+  height: calc(100% - 63px);
   padding-bottom: 80px;
 
   @media screen and (max-width: 1180px) {
@@ -407,7 +411,7 @@ header {
   color: #fff;
   padding-left: 260px;
   width: 100%;
-  padding-top: 73px;
+  padding-top: 63px;
 
   @media screen and (max-width: 1180px) {
     padding-left: 0;
@@ -418,7 +422,7 @@ header {
   #first-view {
     position: relative;
     img {
-      height: calc(100vh - 73px);
+      height: calc(100vh - 63px);
     }
     .mask {
       width: 100%;
@@ -428,7 +432,7 @@ header {
       position: absolute;
       top: 0;
       left: 0;
-      height: calc(100vh - 73px);
+      height: calc(100vh - 63px);
     }
     .top-title-area {
       font-family: 'Noto Serif JP', serif;
@@ -486,6 +490,9 @@ header {
     }
     dd {
       font-size: 55px;
+      @media screen and (max-width: 640px) {
+        font-size: 40px;
+      }
     }
     .title-area {
       margin-left: 2rem;
@@ -519,7 +526,7 @@ header {
   // =========== PICKUP ===========
   #pickup {
     .new-items {
-      width: 35%;
+      width: 45%;
       @media screen and (max-width: 768px) {
         width: 40%;
       }
@@ -705,8 +712,11 @@ header {
           white-space: nowrap;
           font-weight: bold;
           letter-spacing: 4px;
-          @media screen and (max-width: 640px) {
-            font-size: 22px;
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
+          }
+          @media screen and (min-width: 481px) and (max-width: 640px) {
+            font-size: 18px;
           }
           @media screen and (min-width: 641px) {
             font-size: 14px;
@@ -793,6 +803,7 @@ a:after {
 
 a:hover:after {
   transform: translate(0, 0);
+  transition: .5s;
 }
 
 

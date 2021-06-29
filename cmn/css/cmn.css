@@ -2,6 +2,9 @@
 body {
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif; }
 
+a:hover {
+  text-decoration: none; }
+
 .top-title {
   overflow: hidden;
   transform: translate(-140%, 0);
@@ -27,7 +30,7 @@ body {
   transform: translate(0, 0); }
 
 .bx-wrapper {
-  border: none; }
+  border: none !important; }
 
 .loading-fadeIn {
   opacity: 0;
@@ -176,7 +179,7 @@ header {
   background: #fff;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: calc(100% - 73px);
+  height: calc(100% - 63px);
   padding-bottom: 80px; }
   @media screen and (max-width: 1180px) {
     #side-menu {
@@ -306,14 +309,14 @@ header {
   color: #fff;
   padding-left: 260px;
   width: 100%;
-  padding-top: 73px; }
+  padding-top: 63px; }
   @media screen and (max-width: 1180px) {
     #main {
       padding-left: 0; } }
   #main #first-view {
     position: relative; }
     #main #first-view img {
-      height: calc(100vh - 73px); }
+      height: calc(100vh - 63px); }
     #main #first-view .mask {
       width: 100%;
       background-image: url("../img/texture.png");
@@ -322,7 +325,7 @@ header {
       position: absolute;
       top: 0;
       left: 0;
-      height: calc(100vh - 73px); }
+      height: calc(100vh - 63px); }
     #main #first-view .top-title-area {
       font-family: 'Noto Serif JP', serif;
       position: absolute;
@@ -366,6 +369,9 @@ header {
       font-size: 16px; }
     #main .section-title-area dd {
       font-size: 55px; }
+      @media screen and (max-width: 640px) {
+        #main .section-title-area dd {
+          font-size: 40px; } }
     #main .section-title-area .title-area {
       margin-left: 2rem;
       font-family: 'Noto Serif JP', serif; }
@@ -382,7 +388,7 @@ header {
   #main #about p.sp-display {
     line-height: 250%; }
   #main #pickup .new-items {
-    width: 35%; }
+    width: 45%; }
     @media screen and (max-width: 768px) {
       #main #pickup .new-items {
         width: 40%; } }
@@ -520,9 +526,12 @@ header {
           white-space: nowrap;
           font-weight: bold;
           letter-spacing: 4px; }
-          @media screen and (max-width: 640px) {
+          @media screen and (max-width: 480px) {
             #main #partner .banner .banner-text p {
-              font-size: 22px; } }
+              font-size: 14px; } }
+          @media screen and (min-width: 481px) and (max-width: 640px) {
+            #main #partner .banner .banner-text p {
+              font-size: 18px; } }
           @media screen and (min-width: 641px) {
             #main #partner .banner .banner-text p {
               font-size: 14px; } }
@@ -586,4 +595,5 @@ a:after {
   content: ""; }
 
 a:hover:after {
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+  transition: .5s; }
