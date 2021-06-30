@@ -597,37 +597,3 @@ a:after {
 a:hover:after {
   transform: translate(0, 0);
   transition: .5s; }
-
-.archive-flex {
-  display: flex !important;
-  align-items: center; }
-
-.archive-item {
-  width: calc((100% / 4) - 20px); }
-  @media screen and (min-width: 641px) and (max-width: 1180px) {
-    .archive-item {
-      width: calc((100% / 3) - 20px); } }
-  @media screen and (max-width: 640px) {
-    .archive-item {
-      width: calc((100% / 2) - 20px); } }
-  @media screen and (max-width: 480px) {
-    .archive-item {
-      font-size: 12px; } }
-#search {
-  position: relative;
-  margin-top: 20px; }
-  #search input {
-    width: 100%;
-    border-radius: 20px;
-    padding: 5px 10px;
-    font-size: 14px; }
-  #search button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    padding: 0;
-    transform: translate(-50%, -50%);
-    color: #d6d6d6; }
-
-.prd_lst_pager .prd_lst_pager_prev, .prd_lst_pager .prd_lst_pager_next {
-  width: 4em !important; }

@@ -24,9 +24,7 @@
             <span></span>
         </div>
         <div class="logo mx-auto">
-            <a href="<{$home_url}>">
-                <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/logo_top01.png" alt="">
-            </a>
+            <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/logo_top01.png" alt="">
         </div>
         <div class="text-white d-flex align-items-center justify-content-between user-area">
             <{if $members_use_flg == true}>
@@ -71,33 +69,17 @@
     <main class="d-flex">
         <div id="side-menu">
             <ul class="menu">
-                <li>
-                    <form action="<{$product_search_url}>" method="GET" class="mar_b_50" id="search">
-                        <{$product_search_mode}>
-<!--                        <select name="cid" class="mar_b_10">-->
-<!--                            <option value="">カテゴリーを選択</option>-->
-<!--                            <{section name=num loop=$category}>-->
-<!--                            <option value="<{$category[num].id}>"><{$category[num].name}></option>-->
-<!--                            <{/section}>-->
-<!--                        </select>-->
-                        <input type="text" name="keyword" placeholder="商品を検索" />
-                        <button class="btn btn-xs">
-                            <i class="icon-lg-b icon-search va-35"></i>
-                            <span class="visible-phone mar_l_5 pad_r_5 txt_14"><i class="fas fa-search"></i></span>
-                        </button>
-                    </form>
-                </li>
                 <li class="menu__item">
                     <a class="menu__item__link js-menu__item__link" href="">HONDA</a>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611826">50cc - 124cc</a>
+                            <a href="">50cc - 124cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611827">125cc - 400cc</a>
+                            <a href="">125cc - 400cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611828">401cc - 1400cc</a>
+                            <a href="">401cc - 1400cc</a>
                         </li>
                     </ul>
                 </li>
@@ -105,13 +87,13 @@
                     <a class="menu__item__link js-menu__item__link" href="">YAMAHA</a>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611818">50cc - 124cc</a>
+                            <a href="">50cc - 124cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611819">125cc - 400cc</a>
+                            <a href="">125cc - 400cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611820">401cc - 1400cc</a>
+                            <a href="">401cc - 1400cc</a>
                         </li>
                     </ul>
                 </li>
@@ -119,13 +101,13 @@
                     <a class="menu__item__link js-menu__item__link" href="">SUZUKI</a>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611832">50cc - 124cc</a>
+                            <a href="">50cc - 124cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611833">125cc - 400cc</a>
+                            <a href="">125cc - 400cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611834">401cc - 1400cc</a>
+                            <a href="">401cc - 1400cc</a>
                         </li>
                     </ul>
                 </li>
@@ -133,13 +115,13 @@
                     <a class="menu__item__link js-menu__item__link" href="">KAWASAKI</a>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611829">50cc - 124cc</a>
+                            <a href="">50cc - 124cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611830">125cc - 400cc</a>
+                            <a href="">125cc - 400cc</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611831">401cc - 1400cc</a>
+                            <a href="">401cc - 1400cc</a>
                         </li>
                     </ul>
                 </li>
@@ -160,17 +142,17 @@
         <div class="footer-wrap d-flex justify-content-between sp-flex-column">
             <ul>
                 <li>INFORMATION</li>
-                <li><a href="<{$sk_url}>">特定商取引に基づく表記</a></li>
-                <li><a href="<{$privacy_url}>">プライバシーポリシー</a></li>
+                <li><a href="#">特定商取引に基づく表記</a></li>
+                <li><a href="#">個人情報の取扱目的</a></li>
                 <li><a href="#">取扱店舗</a></li>
-                <li><a href="<{$members_regi_url}>">会員登録</a></li>
-                <li><a href="<{$view_inq_url}>">お問い合わせ</a></li>
+                <li><a href="#">会社概要</a></li>
+                <li><a href="#">お問い合わせ</a></li>
             </ul>
             <ul>
                 <li>SHOPPING</li>
-                <li><a href="<{$sk_url}>#payment">お支払いについて</a></li>
-                <li><a href="<{$sk_url}>#delivery">配送・配送料について</a></li>
-                <li><a href="<{$sk_url}>#henpin">返品・交換について</a></li>
+                <li><a href="#">お支払いについて</a></li>
+                <li><a href="#">配送・配送料について</a></li>
+                <li><a href="#">返品・交換について</a></li>
             </ul>
         </div>
         <p class="text-center copy">© 72GARAGE PRODUCT ONLINE STORE</p>
@@ -195,7 +177,7 @@
 
         if ($(window).width() > 1180) {
             $("#btn01").addClass("active")
-            $('.slider').slick({
+            $('.slider').bxSlider({
                 // autoplay: true,
                 // autoplaySpeed: 4000,
                 arrows: true,
@@ -206,7 +188,7 @@
                 // nextArrow: "<div>次へ</div>"
             });
         } else {
-            $('.slider').slick({
+            $('.slider').bxSlider({
                 // autoplay: true,
                 // autoplaySpeed: 4000,
                 arrows: true,
