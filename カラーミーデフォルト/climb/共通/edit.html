@@ -1,3 +1,4 @@
+<meta name="format-detection" content="telephone=no">
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,168 +17,168 @@
 </div>
 
 
-    <!-- header -->
-    <header class="d-flex align-items-center py-2 px-3 px-lg-5">
-        <div class="btn-trigger" id="btn01">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logo mx-auto">
-            <a href="<{$home_url}>">
-                <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/logo_top01.png" alt="">
-            </a>
-        </div>
-        <div class="text-white d-flex align-items-center justify-content-between user-area">
-            <{if $members_use_flg == true}>
-                <{if $members_login_flg == false}>
-                    <a href="<{$members_login_url}>" class="text-white">
-                        <dl class="text-center mb-0 mt-1 ml-auto">
-                            <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
-                            <dd class="mb-0 pc-display">ログイン</dd>
-                        </dl>
-                    </a>
-<!--                    <{if $members_register_flg == true}>-->
-<!--                        <a href="<{$members_regi_url}>" class="text-white">-->
-<!--                            <dl class="text-center mb-0 mt-1 ml-auto">-->
-<!--                                <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>-->
-<!--                                <dd class="mb-0 pc-display">会員登録</dd>-->
-<!--                            </dl>-->
-<!--                        </a>-->
-<!--                    <{/if}>-->
-                <{else}>
-                    <a href="<{$view_myaccount_url}>" class="text-white">
-                        <dl class="text-center mb-0 mt-1 ml-auto">
-                            <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
-                            <dd class="mb-0 pc-display">マイページ</dd>
-                        </dl>
-                    </a>
-                <{/if}>
-            <{/if}>
-            <{assign var="nData" value="0"}>
-            <{section name=num loop=$incart}>
-            <{math equation="n + add" n=$nData add=$incart[num].product_num assign="nData"}>
-            <{/section}>
-            <a href="<{$view_cart_url}>" class="text-white">
-                <dl class="text-center mb-0 mt-1">
-                    <dt class="d-inline-block mb-1"><i class="fas fa-shopping-cart"></i></dt>
-                    <dd class="mb-0 pc-display">カート(<{$nData}>)</dd>
-                </dl>
-            </a>
-        </div>
-    </header>
-    <!-- // header -->
-    <!-- container -->
-    <main class="d-flex">
-        <div id="side-menu">
-            <ul class="menu">
-                <li>
-                    <form action="<{$product_search_url}>" method="GET" class="mar_b_50" id="search">
-                        <{$product_search_mode}>
-<!--                        <select name="cid" class="mar_b_10">-->
-<!--                            <option value="">カテゴリーを選択</option>-->
-<!--                            <{section name=num loop=$category}>-->
-<!--                            <option value="<{$category[num].id}>"><{$category[num].name}></option>-->
-<!--                            <{/section}>-->
-<!--                        </select>-->
-                        <input type="text" name="keyword" placeholder="商品を検索" />
-                        <button class="btn btn-xs">
-                            <i class="icon-lg-b icon-search va-35"></i>
-                            <span class="visible-phone mar_l_5 pad_r_5 txt_14"><i class="fas fa-search"></i></span>
-                        </button>
-                    </form>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">HONDA</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611826">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611827">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611828">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">YAMAHA</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611818">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611819">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611820">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">SUZUKI</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611832">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611833">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611834">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item__link js-menu__item__link" href="">KAWASAKI</a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611829">50cc - 124cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611830">125cc - 400cc</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="http://72garage.jp/?mode=grp&gid=2611831">401cc - 1400cc</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="icon-list d-flex justify-content-between text-center ">
-                <li><a href="#"><i class="fab circle fa-twitter d-block"></i>twitter</a></li>
-                <li><a href="#"><i class="fab circle fa-instagram-square d-block"></i>instagram</a></li>
-                <li><a href="#"><i class="fab circle fa-facebook-square d-block"></i>facebook</a></li>
-            </ul>
-        </div>
-        <div id="main">
-            <{include file = $file_name}>
-        </div>
-    </main>
-    <!-- // container -->
-    <!-- footer -->
-    <footer>
-        <div class="footer-wrap d-flex justify-content-between sp-flex-column">
-            <ul>
-                <li>INFORMATION</li>
-                <li><a href="<{$sk_url}>">特定商取引に基づく表記</a></li>
-                <li><a href="<{$privacy_url}>">プライバシーポリシー</a></li>
-                <li><a href="#">取扱店舗</a></li>
-                <li><a href="<{$members_regi_url}>">会員登録</a></li>
-                <li><a href="<{$view_inq_url}>">お問い合わせ</a></li>
-            </ul>
-            <ul>
-                <li>SHOPPING</li>
-                <li><a href="<{$sk_url}>#payment">お支払いについて</a></li>
-                <li><a href="<{$sk_url}>#delivery">配送・配送料について</a></li>
-                <li><a href="<{$sk_url}>#henpin">返品・交換について</a></li>
-            </ul>
-        </div>
-        <p class="text-center copy">© 72GARAGE PRODUCT ONLINE STORE</p>
-    </footer>
-    <!-- // footer -->
+<!-- header -->
+<header class="d-flex align-items-center py-2 px-3 px-lg-5">
+    <div class="btn-trigger" id="btn01">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="logo mx-auto">
+        <a href="<{$home_url}>">
+            <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/logo_top01.png" alt="">
+        </a>
+    </div>
+    <div class="text-white d-flex align-items-center justify-content-between user-area">
+        <{if $members_use_flg == true}>
+        <{if $members_login_flg == false}>
+        <a href="<{$members_login_url}>" class="text-white">
+            <dl class="text-center mb-0 mt-1 ml-auto">
+                <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
+                <dd class="mb-0 pc-display">ログイン</dd>
+            </dl>
+        </a>
+        <!--                    <{if $members_register_flg == true}>-->
+        <!--                        <a href="<{$members_regi_url}>" class="text-white">-->
+        <!--                            <dl class="text-center mb-0 mt-1 ml-auto">-->
+        <!--                                <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>-->
+        <!--                                <dd class="mb-0 pc-display">会員登録</dd>-->
+        <!--                            </dl>-->
+        <!--                        </a>-->
+        <!--                    <{/if}>-->
+        <{else}>
+        <a href="<{$view_myaccount_url}>" class="text-white">
+            <dl class="text-center mb-0 mt-1 ml-auto">
+                <dt class="d-inline-block mb-1"><i class="far fa-user"></i></dt>
+                <dd class="mb-0 pc-display">マイページ</dd>
+            </dl>
+        </a>
+        <{/if}>
+        <{/if}>
+        <{assign var="nData" value="0"}>
+        <{section name=num loop=$incart}>
+        <{math equation="n + add" n=$nData add=$incart[num].product_num assign="nData"}>
+        <{/section}>
+        <a href="<{$view_cart_url}>" class="text-white">
+            <dl class="text-center mb-0 mt-1">
+                <dt class="d-inline-block mb-1"><i class="fas fa-shopping-cart"></i></dt>
+                <dd class="mb-0 pc-display">カート</dd>
+            </dl>
+        </a>
+    </div>
+</header>
+<!-- // header -->
+<!-- container -->
+<main class="d-flex">
+    <div id="side-menu">
+        <ul class="menu">
+            <li>
+                <form action="<{$product_search_url}>" method="GET" class="mar_b_50" id="search">
+                    <{$product_search_mode}>
+                    <!--                        <select name="cid" class="mar_b_10">-->
+                    <!--                            <option value="">カテゴリーを選択</option>-->
+                    <!--                            <{section name=num loop=$category}>-->
+                    <!--                            <option value="<{$category[num].id}>"><{$category[num].name}></option>-->
+                    <!--                            <{/section}>-->
+                    <!--                        </select>-->
+                    <input type="text" name="keyword" placeholder="商品を検索" />
+                    <button class="btn btn-xs">
+                        <i class="icon-lg-b icon-search va-35"></i>
+                        <span class="visible-phone mar_l_5 pad_r_5 txt_14"><i class="fas fa-search"></i></span>
+                    </button>
+                </form>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">HONDA</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611826">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611827">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611828">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">YAMAHA</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611818">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611819">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611820">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">SUZUKI</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611832">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611833">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611834">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">KAWASAKI</a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611829">50cc - 124cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611830">125cc - 400cc</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="http://72garage.jp/?mode=grp&gid=2611831">401cc - 1400cc</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="icon-list d-flex justify-content-between text-center ">
+            <li><a href="#"><i class="fab circle fa-twitter d-block"></i>twitter</a></li>
+            <li><a href="#"><i class="fab circle fa-instagram-square d-block"></i>instagram</a></li>
+            <li><a href="#"><i class="fab circle fa-facebook-square d-block"></i>facebook</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <{include file = $file_name}>
+    </div>
+</main>
+<!-- // container -->
+<!-- footer -->
+<footer>
+    <div class="footer-wrap d-flex justify-content-between sp-flex-column">
+        <ul>
+            <li>INFORMATION</li>
+            <li><a href="<{$sk_url}>">特定商取引に基づく表記</a></li>
+            <li><a href="<{$privacy_url}>">プライバシーポリシー</a></li>
+            <li><a href="<{$members_regi_url}>">会員登録</a></li>
+            <li><a href="<{$view_inq_url}>">お問い合わせ</a></li>
+        </ul>
+        <ul>
+            <li>SHOPPING</li>
+            <li><a href="<{$sk_url}>#payment">お支払いについて</a></li>
+            <li><a href="<{$sk_url}>#delivery">配送・配送料について</a></li>
+            <li><a href="<{$sk_url}>#henpin">返品・交換について</a></li>
+        </ul>
+    </div>
+    <p class="text-center copy">&#169; 72GARAGE PRODUCT ONLINE STORE</p>
+</footer>
+<!-- // footer -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/d8f4e2d3a6.js" crossorigin="anonymous"></script>
@@ -193,15 +194,18 @@
             controls:false
         });
 
+
         if ($(window).width() > 1180) {
             $("#btn01").addClass("active")
             $('.slider').slick({
                 // autoplay: true,
                 // autoplaySpeed: 4000,
                 arrows: true,
+
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 centerMode: true,
+
                 // prevArrow: "<div>前へ</div>",
                 // nextArrow: "<div>次へ</div>"
             });
@@ -210,13 +214,18 @@
                 // autoplay: true,
                 // autoplaySpeed: 4000,
                 arrows: true,
+
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 centerMode: true,
+
                 // prevArrow: "<div>前へ</div>",
                 // nextArrow: "<div>次へ</div>"
             });
         }
+
+
+
 
     })
 </script>
@@ -246,18 +255,18 @@
             $("#btn01").removeClass("active")
             $("#side-menu").animate({
                 "left": "-260px"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
             $("#main").animate({
                 "padding-left": "0"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
         } else {
             $("#btn01").addClass("active")
             $("#side-menu").animate({
                 "left": "0"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
             $("#main").animate({
                 "padding-left": "260px"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
         }
     }
 </script>
@@ -269,23 +278,23 @@
         if ($(this).hasClass("active")) {
             $("#side-menu").animate({
                 "left": "0"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
             $("#main").animate({
                 "padding-left": "260px"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
             $("footer").animate({
                 "padding-left": "260px"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
         } else {
             $("#side-menu").animate({
                 "left": "-260px"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
             $("#main").animate({
                 "padding-left": "0"
             })
             $("footer").animate({
                 "padding-left": "0"
-            })
+            },{ duration: 'fast', easing: 'easeOutCubic', })
         }
     })
 </script>

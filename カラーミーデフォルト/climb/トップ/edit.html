@@ -30,22 +30,17 @@
     <div class="wrap fadein">
         <div class="d-flex align-items-center sp-flex-column tb-flex-column">
             <p class="pc-display">
-                ここで72GARAGEの紹介文を書きます。<br/>
-                簡潔におおよそ５行程度に収まるような内容<br/>
-                で記述すると良いかもしれません。<br/>
-                得意なこと、熱意など記述すると良いと思います。<br/>
-                これはサンプルテキストです。<br/>
+                72garageの商品は完全ハンドメイド。<br/>
+                ありそうでなかったそんな商品に着目し<br/>
+                ドレスアップはもちろん、ライダーとの<br/>
+                一体感を高め走行性能を引き上げるような<br/>
+                パーツ製作を心がけています。<br/>
+                FRP職人が1点1点心を込めて制作いたします。
             </p>
             <p class="sp-display">
-                ここで72GARAGEの紹介文を書きます。
-                簡潔におおよそ５行程度に収まるような内容
-                で記述すると良いかもしれません。
-                得意なこと、熱意など記述すると良いと思います。
-                これはサンプルテキストです。
+                72garageの商品は完全ハンドメイド。ありそうでなかったそんな商品に着目しドレスアップはもちろん、ライダーとの一体感を高め走行性能を引き上げるようなパーツ製作を心がけています。FRP職人が1点1点心を込めて制作いたします。
             </p>
-
             <img class="ml-auto d-block w-50 sp-full sp-top" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_about01.jpg" alt="">
-
         </div>
     </div>
 </section>
@@ -60,34 +55,34 @@
     </div>
 
     <{if $seller_num != 0}>
-        <div class="d-flex wrap justify-content-between sp-flex-column">
-            <{section name=num loop=$seller}>
-                <div class="new-items fadein">
-                    <a href="<{$seller[num].link_url}>" class="prd_lst_link">
-                        <{if $seller[num].img_url != ""}>
-                        <img src="<{$seller[num].img_url}>" class="prd_lst_img" alt="<{$seller[num].name}>" />
-                        <{else}>
-                        <img src="https://img.shop-pro.jp/tmpl_img/66/prd_lst_noimage.png" class="prd_lst_img" alt="<{$seller[num].name}>" />
-                        <{/if}>
-                    </a>
+    <div class="d-flex wrap justify-content-between sp-flex-column">
+        <{section name=num loop=$seller}>
+        <div class="new-items fadein">
+            <a href="<{$seller[num].link_url}>" class="prd_lst_link">
+                <{if $seller[num].img_url != ""}>
+                <img src="<{$seller[num].img_url}>" class="prd_lst_img" alt="<{$seller[num].name}>" />
+                <{else}>
+                <img src="https://img.shop-pro.jp/tmpl_img/66/prd_lst_noimage.png" class="prd_lst_img" alt="<{$seller[num].name}>" />
+                <{/if}>
+            </a>
 
-                    <dl>
-                        <dt><a href="<{$seller[num].link_url}>"><{$seller[num].name}></a></dt>
-                        <{if $members_login_flg == true && $seller[num].discount_flg == true}>
-                        <dd class="prd_lst_regular prd_lst_span"><{$seller[num].regular_price}></dd>
-                        <{/if}>
-                        <{if $seller[num].soldout_flg == false}>
-                        <dd class="prd_lst_price prd_lst_span"><{$seller[num].price}></dd>
-                        <{if $members_login_flg == true && $seller[num].discount_flg == true}>
-                        <dd class="prd_lst_discount prd_lst_span"><{$seller[num].discount_rate}>OFF!!</dd>
-                        <{/if}>
-                        <{else}>
-                        <dd class="prd_lst_soldout prd_lst_span">SOLD OUT</dd>
-                        <{/if}>
-                    </dl>
-                </div>
-            <{/section}>
+            <dl>
+                <dt><a href="<{$seller[num].link_url}>"><{$seller[num].name}></a></dt>
+                <{if $members_login_flg == true && $seller[num].discount_flg == true}>
+                <dd class="prd_lst_regular prd_lst_span"><{$seller[num].regular_price}></dd>
+                <{/if}>
+                <{if $seller[num].soldout_flg == false}>
+                <dd class="prd_lst_price prd_lst_span"><{$seller[num].price}></dd>
+                <{if $members_login_flg == true && $seller[num].discount_flg == true}>
+                <dd class="prd_lst_discount prd_lst_span"><{$seller[num].discount_rate}>OFF!!</dd>
+                <{/if}>
+                <{else}>
+                <dd class="prd_lst_soldout prd_lst_span">SOLD OUT</dd>
+                <{/if}>
+            </dl>
         </div>
+        <{/section}>
+    </div>
     <{/if}>
 </section>
 
@@ -134,87 +129,67 @@
         <{/if}>
 
         <p class="text-right">
-            <a href="">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+            <a href="/?mode=srh&keyword=">VIEW MORE <i class="fas fa-arrow-right"></i></a>
         </p>
 
     </div>
 </section>
 
-<section id="news" class="top-space">
+<section id="shop" class="top-space">
     <div class="section-title-area fadein">
         <div class="line"></div>
         <dl class="title-area">
-            <dt>72GARAGEの活動</dt>
-            <dd>NEWS</dd>
+            <dt>取扱店舗</dt>
+            <dd>SHOP</dd>
         </dl>
     </div>
 
     <div class="wrap">
         <div class="d-flex flex-wrap justify-content-between">
             <div class="items fadein">
-                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_news01.jpg" alt="">
+                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_shop01-min.jpg" alt="">
                 <dl>
-                    <dt>
-                        <span>ニュースタイトル</span>
-                    </dt>
-                    <dd>キャッチコピーのようなひとこと</dd>
+                    <dt class="mb-3"><span>南海部品 箕面店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>562-0014</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府箕面市萱野1丁目8-2</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:072-722-5353">072-722-5353</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 19:00 (水曜定休)</dd>
                 </dl>
             </div>
 
             <div class="items fadein">
-                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_news02.jpg" alt="">
+                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_shop02-min.jpg" alt="">
                 <dl>
-                    <dt>
-                        <span>ニュースタイトル</span>
-                    </dt>
-                    <dd>キャッチコピーのようなひとこと</dd>
+                    <dt class="mb-3"><span>南海部品 久留米小森野店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>830-0001</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>福岡県久留米市小森野1丁目6-1</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:0942-40-5761">0942-40-5761</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 19:00 (火曜定休)</dd>
                 </dl>
             </div>
 
             <div class="items fadein">
-                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_news03.jpg" alt="">
+                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_shop03-min.jpg" alt="">
                 <dl>
-                    <dt>
-                        <span>ニュースタイトル</span>
-                    </dt>
-                    <dd>キャッチコピーのようなひとこと</dd>
+                    <dt class="mb-3"><span>バイクワールド りんくうシークル店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>598-0047</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府泉佐野市りんくう往来南3</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:072-458-8197">072-458-8197</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 20:00</dd>
                 </dl>
             </div>
 
             <div class="items fadein">
-                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_news04.jpg" alt="">
+                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_shop04-min.jpg" alt="">
                 <dl>
-                    <dt>
-                        <span>ニュースタイトル</span>
-                    </dt>
-                    <dd>キャッチコピーのようなひとこと</dd>
-                </dl>
-            </div>
-
-            <div class="items fadein">
-                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_news05.jpg" alt="">
-                <dl>
-                    <dt>
-                        <span>ニュースタイトル</span>
-                    </dt>
-                    <dd>キャッチコピーのようなひとこと</dd>
-                </dl>
-            </div>
-
-            <div class="items fadein">
-                <img class="" src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_news06.jpg" alt="">
-                <dl>
-                    <dt>
-                        <span>ニュースタイトル</span>
-                    </dt>
-                    <dd>キャッチコピーのようなひとこと</dd>
+                    <dt class="mb-3"><span>レーシングワールド 本店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>566-0073</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府摂津市鳥飼和道2丁目8-5</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:072-653-0298">072-653-0298</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>11:00 ~ 20:00 (水曜定休)</dd>
                 </dl>
             </div>
         </div>
-
-        <p class="text-right">
-            <a href="">VIEW MORE <i class="fas fa-arrow-right"></i></a>
-        </p>
     </div>
 </section>
 
@@ -233,120 +208,62 @@
                 <div>
                     <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story01-min.jpg" alt="">
                     <dl>
-                        <dt>20xx年 xx月 オリジナル商品開発開始</dt>
+                        <dt>2019年 商品開発開始！</dt>
                         <dd class="pc-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの<br>
-                            ストーリを記述します。<br>
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより<br>
-                            一定数の購入を見込める形となり、また成り立ちを知ることで<br>
-                            親近感を覚え信頼感を与えることが可能になります。<br>
+                            自分が欲しいと思うカスタムパーツが<br>
+                            まだ市場に出回っておらず、YZF-R1 09 ~ 14年モデル用<br>
+                            タンクカバーの制作を開始。<br>
+                            構想を形にするところから始めるため<br>
+                            当時乗っていたYZF-R6からYZF-R1へと乗り換える<br>
                         </dd>
                         <dd class="sp-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの
-                            ストーリを記述します。
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより
-                            一定数の購入を見込める形となり、また成り立ちを知ることで
-                            親近感を覚え信頼感を与えることが可能になります。
+                            自分が欲しいと思うカスタムパーツがまだ市場に出回っておらず、YZF-R1 09 ~ 14年モデル用タンクカバーの制作を開始。構想を形にするところから始めるため、当時乗っていたYZF-R6からYZF-R1へと乗り換える
                         </dd>
                     </dl>
                 </div>
                 <div class="fadein">
                     <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story02-min.jpg" alt="">
                     <dl>
-                        <dt>20xx年 xx月 オリジナル商品開発開始</dt>
+                        <dt>2020年 受注生産開始！</dt>
                         <dd class="pc-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの<br>
-                            ストーリを記述します。<br>
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより<br>
-                            一定数の購入を見込める形となり、また成り立ちを知ることで<br>
-                            親近感を覚え信頼感を与えることが可能になります。<br>
+                            構想がいよいよ形となり商品化できる段階へ。<br>
+                            現行車種のカスタムパーツが多く出る中、<br>
+                            YZF-R1  09 ~ 14年モデル用タンクカバーの<br>
+                            受注生産を開始<br>
+                            また同時期に、YZF-R6 08-16年モデル用<br>
+                            タンクカバーの開発もスタート
                         </dd>
                         <dd class="sp-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの
-                            ストーリを記述します。
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより
-                            一定数の購入を見込める形となり、また成り立ちを知ることで
-                            親近感を覚え信頼感を与えることが可能になります。
+                            構想がいよいよ形となり商品化できる段階へ。現行車種のカスタムパーツが多く出る中、YZF-R1  09 ~ 14年モデル用タンクカバーの受注生産を開始。また同時期に、YZF-R6 08-16年モデル用、タンクカバーの開発もスタート
                         </dd>
                     </dl>
                 </div>
                 <div class="fadein">
                     <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story03-min.jpg" alt="">
                     <dl>
-                        <dt>20xx年 xx月 オリジナル商品開発開始</dt>
+                        <dt>2021年 本格販売開始！</dt>
                         <dd class="pc-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの<br>
-                            ストーリを記述します。<br>
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより<br>
-                            一定数の購入を見込める形となり、また成り立ちを知ることで<br>
-                            親近感を覚え信頼感を与えることが可能になります。<br>
+                            個人の構想、SNSで始まった72garage<br>
+                            地道な営業活動の末、バイク用品店での取り扱いを獲得。<br>
+                            2021年7月現在では、4店舗での取り扱いをも実現<br>
                         </dd>
                         <dd class="sp-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの
-                            ストーリを記述します。
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより
-                            一定数の購入を見込める形となり、また成り立ちを知ることで
-                            親近感を覚え信頼感を与えることが可能になります。
+                            個人の構想、SNSで始まった72garage。地道な営業活動の末、バイク用品店での取り扱いを獲得。2021年7月現在では、4店舗での取り扱をも実現。
                         </dd>
                     </dl>
                 </div>
                 <div class="fadein">
                     <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story01-min.jpg" alt="">
                     <dl>
-                        <dt>20xx年 xx月 オリジナル商品開発開始</dt>
+                        <dt>2021年 イベント販売・オンラインストア開始！</dt>
                         <dd class="pc-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの<br>
-                            ストーリを記述します。<br>
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより<br>
-                            一定数の購入を見込める形となり、また成り立ちを知ることで<br>
-                            親近感を覚え信頼感を与えることが可能になります。<br>
+                            2021年夏にはYZF-R1 YZF-R6 Onlyの大規模ミーティングを開催予定。<br/>
+                            鈴鹿サーキットGPスクエアでの出店を計画中。<br/>
+                            また、全国販売して欲しいという声も大きく、<br/>
+                            オンラインストア72garageを開設。
                         </dd>
                         <dd class="sp-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの
-                            ストーリを記述します。
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより
-                            一定数の購入を見込める形となり、また成り立ちを知ることで
-                            親近感を覚え信頼感を与えることが可能になります。
-                        </dd>
-                    </dl>
-                </div>
-                <div class="fadein">
-                    <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story02-min.jpg" alt="">
-                    <dl>
-                        <dt>20xx年 xx月 オリジナル商品開発開始</dt>
-                        <dd class="pc-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの<br>
-                            ストーリを記述します。<br>
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより<br>
-                            一定数の購入を見込める形となり、また成り立ちを知ることで<br>
-                            親近感を覚え信頼感を与えることが可能になります。<br>
-                        </dd>
-                        <dd class="sp-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの
-                            ストーリを記述します。
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより
-                            一定数の購入を見込める形となり、また成り立ちを知ることで
-                            親近感を覚え信頼感を与えることが可能になります。
-                        </dd>
-                    </dl>
-                </div>
-                <div class="fadein">
-                    <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story03-min.jpg" alt="">
-                    <dl>
-                        <dt>20xx年 xx月 オリジナル商品開発開始</dt>
-                        <dd class="pc-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの<br>
-                            ストーリを記述します。<br>
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより<br>
-                            一定数の購入を見込める形となり、また成り立ちを知ることで<br>
-                            親近感を覚え信頼感を与えることが可能になります。<br>
-                        </dd>
-                        <dd class="sp-display">
-                            ここで72GARAGEの成り立ちであったり、現在に至るまでの
-                            ストーリを記述します。
-                            人は感情で商品を買う言うデータがあるため感情的に訴えることにより
-                            一定数の購入を見込める形となり、また成り立ちを知ることで
-                            親近感を覚え信頼感を与えることが可能になります。
+                            2021年夏にはYZF-R1 YZF-R6 Onlyの大規模ミーティングを開催予定。鈴鹿サーキットGPスクエアでの出店を計画中。また、全国販売して欲しいという声も大きく、オンラインストア72garageを開設。
                         </dd>
                     </dl>
                 </div>

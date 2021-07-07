@@ -445,8 +445,6 @@ header {
         left: 5%;
         bottom: 5%;
       }
-
-
       h2 {
         font-size: 25px;
         letter-spacing: 0.5px;
@@ -537,7 +535,7 @@ header {
       dl {
         font-weight: 200;
         width: 100%;
-        line-height: 200%;
+        line-height: 150%;
         margin-top: 1rem;
         letter-spacing: 2px;
         dt {
@@ -576,7 +574,7 @@ header {
       }
       dl {
         margin-top: 1rem;
-        line-height: 200%;
+        line-height: 150%;
         dt {
           font-size: 18px;
         }
@@ -595,20 +593,30 @@ header {
 
   // =========== NEWS ===========
 
-  #news {
+  #shop {
     .items {
       width: calc((100% - 60px) / 3);
       @media screen and (max-width: 768px) {
         width: calc((100% - 30px) / 2);
       }
+      @media screen and (max-width: 480px) {
+        width: calc((100% - 30px) / 1);
+      }
       margin-bottom: 2rem;
       dl {
         margin-top: 1rem;
-        line-height: 200%;
+        line-height: 150%;
         dt {
           font-size: 18px;
+          @media screen and (max-width: 640px) {
+            line-height: 120%;
+            font-size: 14px;
+          }
         }
         dd {
+          .f16 {
+            font-size: 16px;
+          }
           font-size: 14px;
         }
       }
