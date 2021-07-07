@@ -35,7 +35,10 @@
                 <{/if}>
             </a>
             <span class="prd_lst_name prd_lst_span">
-            <a href="<{$productlist[num].link_url}>"><{$productlist[num].name}></a>
+            <a href="<{$productlist[num].link_url}>">
+                <span style="font-size: 12px"><{$productlist[num].model}></span><br>
+                <{$productlist[num].name}>
+            </a>
           </span>
             <{if $productlist[num].s_expl != ""}>
             <span class="prd_lst_exp prd_lst_span">

@@ -31,7 +31,12 @@
 <div class="container_section wrap">
     <{if $product.id != ""}>
     <form name="product_form" method="post" action="<{$cart_url}>">
-        <h2 class="ttl_h2"><{$product_name}></h2>
+        <{section name=cnt loop=$group_breadcrumb_list}>
+        <h2 class="ttl_h2">
+            <span style="font-size: 12px"><{$bid_name}></span><br />
+            <{$product_name}>
+        </h2>
+        <{/section}>
 
         <!-- 商品画像 -->
         <{if $product.img_url != "" || $otherimg_num != 0}>

@@ -67,7 +67,9 @@
             </a>
 
             <dl>
-                <dt><a href="<{$seller[num].link_url}>"><{$seller[num].name}></a></dt>
+                <dt><a href="<{$seller[num].link_url}>">
+                    <span style="font-size: 12px"><{$seller[num].model}></span>
+                    <br/><{$seller[num].name}></a></dt>
                 <{if $members_login_flg == true && $seller[num].discount_flg == true}>
                 <dd class="prd_lst_regular prd_lst_span"><{$seller[num].regular_price}></dd>
                 <{/if}>
@@ -110,7 +112,11 @@
                 </a>
 
                 <dl>
-                    <dt><a href="<{$recommend[num].link_url}>"><{$recommend[num].name}></a></dt>
+                    <dt><a href="<{$recommend[num].link_url}>">
+                        <span style="font-size: 12px"><{$recommend[num].model}></span>
+                        <br/>
+                        <{$recommend[num].name}>
+                    </a></dt>
                     <{if $members_login_flg == true && $recommend[num].discount_flg == true}>
                     <dd class="prd_lst_regular prd_lst_span"><{$recommend[num].regular_price}></dd>
                     <{/if}>
@@ -211,10 +217,10 @@
                         <dt>2019年 商品開発開始！</dt>
                         <dd class="pc-display">
                             自分が欲しいと思うカスタムパーツが<br>
-                            まだ市場に出回っておらず、YZF-R1 09 ~ 14年モデル用<br>
-                            タンクカバーの制作を開始。<br>
+                            まだ市場に出回っておらず、YZF-R1<br>
+                            09 ~ 14年モデル用 タンクカバーの制作を開始。<br>
                             構想を形にするところから始めるため<br>
-                            当時乗っていたYZF-R6からYZF-R1へと乗り換える<br>
+                            当時乗っていたYZF-R6からYZF-R1へ乗り換える<br>
                         </dd>
                         <dd class="sp-display">
                             自分が欲しいと思うカスタムパーツがまだ市場に出回っておらず、YZF-R1 09 ~ 14年モデル用タンクカバーの制作を開始。構想を形にするところから始めるため、当時乗っていたYZF-R6からYZF-R1へと乗り換える
@@ -239,13 +245,14 @@
                     </dl>
                 </div>
                 <div class="fadein">
-                    <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story03-min.jpg" alt="">
+                    <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_top02-min.jpg" alt="">
                     <dl>
                         <dt>2021年 本格販売開始！</dt>
                         <dd class="pc-display">
                             個人の構想、SNSで始まった72garage<br>
-                            地道な営業活動の末、バイク用品店での取り扱いを獲得。<br>
-                            2021年7月現在では、4店舗での取り扱いをも実現<br>
+                            地道な営業活動の末、バイク用品店での<br>
+                            取り扱いを獲得。2021年7月現在では<br>
+                            4店舗での取り扱いを実現
                         </dd>
                         <dd class="sp-display">
                             個人の構想、SNSで始まった72garage。地道な営業活動の末、バイク用品店での取り扱いを獲得。2021年7月現在では、4店舗での取り扱をも実現。
@@ -253,7 +260,7 @@
                     </dl>
                 </div>
                 <div class="fadein">
-                    <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_story01-min.jpg" alt="">
+                    <img src="https://72garage.s3.ap-northeast-1.amazonaws.com/cmn/img/img_top05-min.jpg" alt="">
                     <dl>
                         <dt>2021年 イベント販売・オンラインストア開始！</dt>
                         <dd class="pc-display">
@@ -276,7 +283,7 @@
     <div class="section-title-area fadein">
         <div class="line"></div>
         <dl class="title-area">
-            <dt>お客様の声</dt>
+            <dt>商品紹介</dt>
             <dd>REVIEW</dd>
         </dl>
     </div>
@@ -284,7 +291,7 @@
     <!-- SnapWidget -->
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <div class="wrap fadein">
-        <iframe src="https://snapwidget.com/embed/945409" class="snapwidget-widget" allowtransparency="true"
+        <iframe src="https://snapwidget.com/embed/948169" class="snapwidget-widget" allowtransparency="true"
                 frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
     </div>
 </section>

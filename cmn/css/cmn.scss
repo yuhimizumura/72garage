@@ -11,7 +11,7 @@ a:hover {
   transform: translate(-140%, 0);
   transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
   color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Noto Serif JP', serif;
   span {
     display: block;
     transform: translate(140%, 0);
@@ -512,7 +512,7 @@ header {
     }
     @media screen and (max-width: 640px) {
       p {
-        font-size: 18px ;
+        font-size: 16px ;
         margin-bottom: 2rem;
       }
     }
@@ -540,15 +540,15 @@ header {
         letter-spacing: 2px;
         dt {
           font-weight: 200;
-          font-size: 24px;
-          @media screen and (max-width: 480px) {
-            font-size: 18px;
-          }
-        }
-        dd {
           font-size: 18px;
           @media screen and (max-width: 480px) {
             font-size: 16px;
+          }
+        }
+        dd {
+          font-size: 16px;
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
           }
         }
       }
@@ -576,7 +576,11 @@ header {
         margin-top: 1rem;
         line-height: 150%;
         dt {
+          font-weight: 200;
           font-size: 18px;
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
         }
         dd {
           font-size: 14px;
@@ -610,7 +614,7 @@ header {
           font-size: 18px;
           @media screen and (max-width: 640px) {
             line-height: 120%;
-            font-size: 14px;
+            font-size: 16px;
           }
         }
         dd {
@@ -644,6 +648,7 @@ header {
       }
 
       .slider {
+        min-height: 800px;
         img {
           width: 100%;
           height: 270px;
@@ -664,12 +669,12 @@ header {
           display: block;
           dt {
             margin: 2rem 0;
-            font-size: 24px;
+            font-size: 16px;
             font-family:'Noto Serif JP', serif;
           }
           dd {
             line-height: 200%;
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -762,12 +767,12 @@ footer {
       }
       li {
         line-height: 200%;
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 2px;
         &:nth-of-type(1) {
           margin-bottom: 2rem;
           font-weight: bold;
-          font-size: 18px;
+          font-size: 16px;
           @media screen and (max-width: 480px) {
             margin-bottom: 1rem;
           }
