@@ -1,0 +1,386 @@
+<section id="first-view">
+    <div class="top-slider">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top07-min.jpg" alt="">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top06-min.jpg" alt="">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top01-min.jpg" alt="">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top02-min.jpg" alt="">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top03-min.jpg" alt="">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top04-min.jpg" alt="">
+        <img src="https://nulltone.jp/72garage/cmn/img/img_top05-min.jpg" alt="">
+    </div>
+    <div class="mask"></div>
+    <div class="top-title-area">
+        <h2 class="pc-display top-title"><span>完全ハンドメイド、走りを変える至高のパーツ店</span></h2>
+        <h2 class="sp-display tb-display top-title"><span>完全ハンドメイド<br>走りを変える至高のパーツ店</span></h2>
+        <h3 class="pc-display top-title">
+            <span>SPECIAL CARBON PARTS</span>
+        </h3>
+        <h3 class="sp-display tb-display top-title"><span>SPECIAL<br>CARBON<br>PARTS</span></h3>
+    </div>
+</section>
+
+
+<section id="about" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>72garageとは？</dt>
+            <dd>About</dd>
+        </dl>
+    </div>
+
+    <div class="wrap fadein">
+        <div class="d-flex align-items-center sp-flex-column tb-flex-column">
+            <p class="pc-display">
+                72garageの商品は完全ハンドメイド。<br/>
+                ありそうでなかったそんな商品に着目し<br/>
+                ドレスアップはもちろん、ライダーとの<br/>
+                一体感を高め走行性能を引き上げるような<br/>
+                パーツ製作を心がけています。<br/>
+                FRP職人が1点1点心を込めて制作いたします。
+            </p>
+            <p class="sp-display">
+                72garageの商品は完全ハンドメイド。ありそうでなかったそんな商品に着目しドレスアップはもちろん、ライダーとの一体感を高め走行性能を引き上げるようなパーツ製作を心がけています。FRP職人が1点1点心を込めて制作いたします。
+            </p>
+            <img class="ml-auto d-block w-50 sp-full sp-top" src="https://nulltone.jp/72garage/cmn/img/img_about01.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="pickup" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>おすすめ商品</dt>
+            <dd>PICKUP</dd>
+        </dl>
+    </div>
+
+    <{if $seller_num != 0}>
+    <div class="d-flex wrap justify-content-between sp-flex-column">
+        <{section name=num loop=$seller}>
+        <div class="new-items fadein">
+            <a href="<{$seller[num].link_url}>" class="prd_lst_link">
+                <{if $seller[num].img_url != ""}>
+                <img src="<{$seller[num].img_url}>" class="prd_lst_img" alt="<{$seller[num].name}>" />
+                <{else}>
+                <img src="https://img.shop-pro.jp/tmpl_img/66/prd_lst_noimage.png" class="prd_lst_img" alt="<{$seller[num].name}>" />
+                <{/if}>
+            </a>
+
+            <dl>
+                <dt><a href="<{$seller[num].link_url}>">
+                    <span style="font-size: 12px"><{$seller[num].model}></span>
+                    <br/><{$seller[num].name}></a></dt>
+                <{if $members_login_flg == true && $seller[num].discount_flg == true}>
+                <dd class="prd_lst_regular prd_lst_span"><{$seller[num].regular_price}></dd>
+                <{/if}>
+                <{if $seller[num].soldout_flg == false}>
+                <dd class="prd_lst_price prd_lst_span"><{$seller[num].price}></dd>
+                <{if $members_login_flg == true && $seller[num].discount_flg == true}>
+                <dd class="prd_lst_discount prd_lst_span"><{$seller[num].discount_rate}>OFF!!</dd>
+                <{/if}>
+                <{else}>
+                <dd class="prd_lst_soldout prd_lst_span">SOLD OUT</dd>
+                <{/if}>
+            </dl>
+        </div>
+        <{/section}>
+    </div>
+    <{/if}>
+</section>
+
+<section id="product" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>定番商品</dt>
+            <dd>PRODUCT</dd>
+        </dl>
+    </div>
+
+    <div class="wrap">
+
+        <{if $recommend_num != 0}>
+        <div class="d-flex flex-wrap justify-content-between">
+            <{section name=num loop=$recommend}>
+            <div class="items fadein">
+                <a href="<{$recommend[num].link_url}>" class="prd_lst_link">
+                    <{if $recommend[num].img_url != ""}>
+                    <img class="" style="height: 150px;" src="<{$recommend[num].img_url}>" alt="">
+                    <{else}>
+                    <img src="https://img.shop-pro.jp/tmpl_img/66/prd_lst_noimage.png" class="prd_lst_img" alt="<{$recommend[num].name}>" />
+                    <{/if}>
+                </a>
+
+                <dl>
+                    <dt><a href="<{$recommend[num].link_url}>">
+                        <span style="font-size: 12px"><{$recommend[num].model}></span>
+                        <br/>
+                        <{$recommend[num].name}>
+                    </a></dt>
+                    <{if $members_login_flg == true && $recommend[num].discount_flg == true}>
+                    <dd class="prd_lst_regular prd_lst_span"><{$recommend[num].regular_price}></dd>
+                    <{/if}>
+                    <{if $recommend[num].soldout_flg == false}>
+                    <dd class="prd_lst_price prd_lst_span"><{$recommend[num].price}></dd>
+                    <{if $members_login_flg == true && $recommend[num].discount_flg == true}>
+                    <dd class="prd_lst_discount prd_lst_span"><{$recommend[num].discount_rate}>OFF!!</dd>
+                    <{/if}>
+                    <{else}>
+                    <dd class="prd_lst_soldout prd_lst_span">SOLD OUT</dd>
+                    <{/if}>
+                </dl>
+            </div>
+            <{/section}>
+        </div>
+        <{/if}>
+
+        <p class="text-right">
+            <a href="/?mode=srh&keyword=">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+        </p>
+
+    </div>
+</section>
+
+<section id="shop" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>取扱店舗</dt>
+            <dd>SHOP</dd>
+        </dl>
+    </div>
+
+    <div class="wrap">
+        <div class="d-flex flex-wrap justify-content-between">
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop01-min.jpg" alt="">
+                <dl>
+                    <dt class="mb-3"><span>南海部品 箕面店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>562-0014</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府箕面市萱野1丁目8-2</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:072-722-5353">072-722-5353</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 19:00 (水曜定休)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop02-min.jpg" alt="">
+                <dl>
+                    <dt class="mb-3"><span>南海部品 久留米小森野店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>830-0001</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>福岡県久留米市小森野1丁目6-1</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:0942-40-5761">0942-40-5761</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 19:00 (火曜定休)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop03-min.jpg" alt="">
+                <dl>
+                    <dt class="mb-3"><span>バイクワールド りんくうシークル店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>598-0047</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府泉佐野市りんくう往来南3</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:072-458-8197">072-458-8197</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 20:00</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop04-min.jpg" alt="">
+                <dl>
+                    <dt class="mb-3"><span>レーシングワールド 本店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>566-0073</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府摂津市鳥飼和道2丁目8-5</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:072-653-0298">072-653-0298</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>11:00 ~ 20:00 (水曜定休)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop05-min.png" alt="">
+                <dl>
+                    <dt class="mb-3"><span>パーツランドイワサキ　高松店</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>761-8071</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>香川県高松市伏石町2152-2</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:087-865-6606">087-865-6606</a></dd>
+                    <dd><i class="fas fa-home pr-2"></i>10:00 ~ 19:00 (火曜定休)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop06-min.png" alt="">
+                <dl>
+                    <dt class="mb-3"><span>MCFWit</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>763-0093</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>香川県丸亀市郡家町2191-3</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:090-4946-2310">090-4946-2310</a></dd>
+                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>10:00 ~ 19:00 (月・火・その他イベント日)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop07-min.jpg" alt="">
+                <dl>
+                    <dt class="mb-3"><span>西宮２りんかん</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>663-8017</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>	兵庫県西宮市大島町6-11</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:090-4946-2310">0798-64-6100</a></dd>
+                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>平　日 10:30 ~ 20:00(4 ~ 9月)</dd>
+                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>土日祝 10:00 ~ 19:30(4 ~ 9月)</dd>
+                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>平　日 10:30 ~ 19:30(10 ~ 3月)</dd>
+                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>土日祝 10:00 ~ 19:00(10 ~ 3月)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop08-min.png" alt="">
+                <dl>
+                    <dt class="mb-3"><span>Favorite Factory</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>560-0041</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>大阪府豊中市清風荘1-15-6</dd>
+                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:06-4866-6000">06-4866-6000</a></dd>
+                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>11:00 ~ 21:00 (火曜定休)</dd>
+                </dl>
+            </div>
+
+            <div class="items fadein">
+                <img class="" src="https://nulltone.jp/72garage/cmn/img/img_shop09-min.png" alt="">
+                <dl>
+                    <dt class="mb-3"><span>株式会社TPFS</span></dt>
+                    <dd><span class="f16 pr-2">〒</span>510-0201</dd>
+                    <dd><i class="fas fa-map-marked-alt pr-2"></i>三重県鈴鹿市稲生町5214-3</dd>
+                    <!--                    <dd class="d-flex align-items-center"><i class="fas fa-phone pr-2"></i><a href="tel:090-4946-2310">090-4946-2310</a></dd>-->
+                    <!--                    <dd style="white-space: nowrap;"><i class="fas fa-home pr-2"></i>11:00 ~ 21:00 (火曜定休)</dd>-->
+                </dl>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="story" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>72GARAGEができるまで</dt>
+            <dd>STORY</dd>
+        </dl>
+    </div>
+
+    <div class="background">
+        <div class="slider-wrap fadein">
+            <div class="slider pt-5">
+                <div>
+                    <img src="https://nulltone.jp/72garage/cmn/img/img_story01-min.jpg" alt="">
+                    <dl>
+                        <dt>2019年 商品開発開始！</dt>
+                        <dd class="pc-display">
+                            自分が欲しいと思うカスタムパーツが<br>
+                            まだ市場に出回っておらず、YZF-R1<br>
+                            09 ~ 14年モデル用 タンクカバーの制作を開始。<br>
+                            構想を形にするところから始めるため<br>
+                            当時乗っていたYZF-R6からYZF-R1へ乗り換える<br>
+                        </dd>
+                        <dd class="sp-display">
+                            自分が欲しいと思うカスタムパーツがまだ市場に出回っておらず、YZF-R1 09 ~ 14年モデル用タンクカバーの制作を開始。構想を形にするところから始めるため、当時乗っていたYZF-R6からYZF-R1へと乗り換える
+                        </dd>
+                    </dl>
+                </div>
+                <div class="fadein">
+                    <img src="https://nulltone.jp/72garage/cmn/img/img_story02-min.jpg" alt="">
+                    <dl>
+                        <dt>2020年 受注生産開始！</dt>
+                        <dd class="pc-display">
+                            構想がいよいよ形となり商品化できる段階へ。<br>
+                            現行車種のカスタムパーツが多く出る中、<br>
+                            YZF-R1  09 ~ 14年モデル用タンクカバーの<br>
+                            受注生産を開始<br>
+                            また同時期に、YZF-R6 08-16年モデル用<br>
+                            タンクカバーの開発もスタート
+                        </dd>
+                        <dd class="sp-display">
+                            構想がいよいよ形となり商品化できる段階へ。現行車種のカスタムパーツが多く出る中、YZF-R1  09 ~ 14年モデル用タンクカバーの受注生産を開始。また同時期に、YZF-R6 08-16年モデル用、タンクカバーの開発もスタート
+                        </dd>
+                    </dl>
+                </div>
+                <div class="fadein">
+                    <img src="https://nulltone.jp/72garage/cmn/img/img_top02-min.jpg" alt="">
+                    <dl>
+                        <dt>2021年 本格販売開始！</dt>
+                        <dd class="pc-display">
+                            個人の構想、SNSで始まった72garage<br>
+                            地道な営業活動の末、バイク用品店での<br>
+                            取り扱いを獲得。2021年7月現在では<br>
+                            4店舗での取り扱いを実現
+                        </dd>
+                        <dd class="sp-display">
+                            個人の構想、SNSで始まった72garage。地道な営業活動の末、バイク用品店での取り扱いを獲得。2022年1月現在では、4店舗での取り扱をも実現。
+                        </dd>
+                    </dl>
+                </div>
+                <div class="fadein">
+                    <img src="https://nulltone.jp/72garage/cmn/img/img_top05-min.jpg" alt="">
+                    <dl>
+                        <dt>2021年 イベント販売・オンラインストア開始！</dt>
+                        <dd class="pc-display">
+                            2021年夏にはYZF-R1 YZF-R6 Onlyの大規模ミーティングを開催。<br/>
+                            鈴鹿サーキットGPスクエアでの出店を実施。<br/>
+                            また、全国販売して欲しいという声も大きく、<br/>
+                            オンラインストア72garageを開設。
+                        </dd>
+                        <dd class="sp-display">
+                            2021年夏にはYZF-R1 YZF-R6 Onlyの大規模ミーティングを開催。鈴鹿サーキットGPスクエアでの出店を実施。また、全国販売して欲しいという声も大きく、オンラインストア72garageを開設。
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="review" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>商品紹介</dt>
+            <dd>REVIEW</dd>
+        </dl>
+    </div>
+
+    <!-- SnapWidget -->
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+    <div class="wrap fadein">
+        <iframe src="https://snapwidget.com/embed/948169" class="snapwidget-widget" allowtransparency="true"
+                frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+    </div>
+</section>
+
+<section id="partner" class="top-space">
+    <div class="section-title-area fadein">
+        <div class="line"></div>
+        <dl class="title-area">
+            <dt>販売パートナー募集</dt>
+            <dd>PARTNER</dd>
+        </dl>
+    </div>
+
+    <div class="d-flex wrap justify-content-between sp-flex-column tb-flex-column">
+        <div class="banner fadein">
+            <img src="https://nulltone.jp/72garage/cmn/img/img_bunner01.png" alt="">
+            <div class="banner-text">
+                <h6>販売代理店募集中</h6>
+                <p>SALES AGENT</p>
+            </div>
+        </div>
+        <div class="banner fadein">
+            <img src="https://nulltone.jp/72garage/cmn/img/img_bunner02.png" alt="">
+            <div class="banner-text">
+                <h6>スポンサー契約募集中</h6>
+                <p>SPONSORED CONTRACT</p>
+            </div>
+        </div>
+    </div>
+</section>
